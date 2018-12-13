@@ -1,19 +1,20 @@
 //reset
 $min-width: 320px;
-$max-width: 1200px;
-$base-bg: #fff;
+$max-width: 1120px;
+$base-bg: #F2F2F2;
 $base-font-size: 14px;
 $base-line-height: normal;
-$base-font-family: Arial, sans-serif;
-$custom-font-family: 'Open Sans', sans-serif;
-$link-color: #0001a9;
+$base-font-family: 'Roboto', sans-serif;
+$custom-font-family: 'Roboto Slab', sans-serif;
+$link-color: #0076ff;
 $default-transition: all .25s ease-in-out 0s;
 
-$main-text-color: #000000;
+$main-text-color: #000;
+$main-text-reverse: #fff;
 
 //text, titles
-$title-color: #000;
-$text-color: #000;
+$title-color: #040404;
+$text-color: #333;
 
 $font-size-h1: 36px;
 $line-height-h1: 42px;
@@ -23,3 +24,6 @@ $line-height-h2: 37px;
 
 $font-size-h3: 28px;
 $line-height-h3: 32px;
+
+$button-full-color: #d9b680;
+$button-transparent-color: rgba(255, 255, 255, 0.4);

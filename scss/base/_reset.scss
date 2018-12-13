@@ -126,12 +126,12 @@ form {
 a {
   outline: none;
   color: $link-color;
-  text-decoration: underline;
+  text-decoration: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   @include transition($default-transition);
   &:hover {
-    text-decoration: underline;
-    color: #ff0000;
+    text-decoration: none;
+    //color: #00a8ff;
   }
   &:active,
   &:focus,
@@ -378,7 +378,7 @@ ul {
 //  titles
 p {
   @include font($base-font-size, $base-line-height, $text-color);
-  padding: 15px 0 15px 0;
+  //padding: 15px 0 15px 0;
   font-weight: 400;
 }
 
@@ -419,4 +419,135 @@ h3 {
 
 [hidden] {
   display: none;
+}
+
+// main styles
+.main-wrapper {
+  overflow: hidden;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  justify-content: flex-start;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  position: relative;
+  min-width: $min-width;
+  width: 100%;
+  min-height: 100%;
+  padding: 0;
+  visibility: visible;
+  @include transition($default-transition);
+}
+
+.wrapper {
+  position: relative;
+  max-width: $max-width;
+  min-width: $min-width;
+  padding: 0;
+  margin: 0 auto;
+}
+
+// loader
+.loaded .main-wrapper {
+  visibility: hidden;
+}
+
+.icon-load {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  display: none;
+  width: 160px;
+  height: 160px;
+  background: url(../img/loader.svg) no-repeat center;
+  -webkit-background-size: cover;
+  background-size: cover;
+  @include translate(-50%, -50%);
+}
+
+.loaded .icon-load {
+  display: block;
+}
+
+// project-settings
+.border-radius {
+  @include radius(9999px);
+  &-t {
+    @include radius(9999px 9999px 0 0);
+  }
+  &-t-l {
+    @include radius(9999px 0 0 0);
+  }
+  &-t-r {
+    @include radius(0 9999px 0 0);
+  }
+  &-r {
+    @include radius(0 9999px 9999px 0);
+  }
+  &-b {
+    @include radius(0 0 9999px 9999px);
+  }
+  &-b-r {
+    @include radius(0 0 9999px 0);
+  }
+  &-b-l {
+    @include radius(0 0 0 9999px);
+  }
+  &-l {
+    @include radius(9999px 0 0 9999px);
+  }
+}
+
+%button-reset {
+  position: relative;
+  overflow: hidden;
+  padding: 16px 25px;
+  @include radius(4px);
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+  @include transition($default-transition);
+  &:hover {
+    border: 1px solid $button-full-color;
+    color: $button-full-color;
+    background: transparent;
+  }
+}
+
+.button {
+  &-full {
+    @extend %button-reset;
+    border: 1px solid transparent;
+    color: $title-color;
+    background: $button-full-color;
+    /*&:hover {
+      border: 1px solid $button-full-color;
+      color: $button-full-color;
+      background: transparent;
+    }*/
+  }
+  &-transparent {
+    @extend %button-reset;
+    border: 1px solid $button-transparent-color;
+    color: $main-text-reverse;
+    background: transparent;
+    /*&:hover {
+      background: $button-transparent-color;
+    }*/
+  }
+}
+
+.title {
+  color: $title-color;
+  font-family: $custom-font-family;
+  font-size: 48px;
+}
+
+.plain-text {
+
 }
