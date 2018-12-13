@@ -1,0 +1,422 @@
+@import '../utils/_mixins';
+@import '../utils/_variables';
+
+/***********************************************************
+*************************** RESET **************************
+***********************************************************/
+::selection {
+  text-shadow: none;
+  color: $main-text-color;
+  background: #2597ff;
+}
+
+::-moz-selection {
+  text-shadow: none;
+  color: $main-text-color;
+  background: #2597ff;
+}
+
+::-ms-selection {
+  text-shadow: none;
+  color: $main-text-color;
+  background: #2597ff;
+}
+
+body {
+  position: relative;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: $base-font-family;
+  font-size: $base-font-size !important;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: $base-bg;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset,
+form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer,
+header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, main {
+  display: block;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border-width: 0;
+}
+
+html {
+  height: 100%;
+  -webkit-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+}
+
+input,
+textarea {
+  @include radius(0);
+  outline: none;
+  color: #000;
+  font-family: $base-font-family;
+  -webkit-appearance: none;
+}
+
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+input[type="button"],
+input[type="submit"],
+button {
+  cursor: pointer
+}
+
+td {
+  margin: 0;
+  padding: 0;
+  vertical-align: top;
+  img {
+    vertical-align: top;
+  }
+}
+
+form {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  outline: none;
+  color: $link-color;
+  text-decoration: underline;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  @include transition($default-transition);
+  &:hover {
+    text-decoration: underline;
+    color: #ff0000;
+  }
+  &:active,
+  &:focus,
+  &:hover,
+  &:link,
+  &:visited {
+    outline: 0;
+  }
+}
+
+a,
+span,
+div,
+button {
+  outline: none !important
+}
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  outline: none;
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+::-webkit-input-placeholder {
+  color: $text-color;
+  @include transition($default-transition);
+}
+
+::-webkit-textarea-placeholder {
+  color: $text-color;
+  @include transition($default-transition);
+}
+
+input {
+  &::-moz-placeholder {
+    color: $text-color;
+    @include transition($default-transition);
+  }
+  &::-ms-placeholder {
+    color: $text-color;
+    @include transition($default-transition);
+  }
+}
+
+textarea {
+  &::-moz-placeholder {
+    color: $text-color;
+    @include transition($default-transition);
+  }
+  &::-ms-placeholder {
+    color: $text-color;
+    @include transition($default-transition);
+  }
+}
+
+button[disabled],
+html input[disabled] {
+  cursor: not-allowed;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  cursor: pointer;
+}
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="submit"],
+input[type="tel"],
+input[type="email"],
+textarea {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+  background: none;
+}
+
+input[type="text"]:focus::-webkit-input-placeholder,
+input[type="number"]:focus::-webkit-input-placeholder,
+input[type="tel"]:focus::-webkit-input-placeholder,
+input[type="email"]:focus::-webkit-input-placeholder,
+input[type="password"]:focus::-webkit-input-placeholder,
+textarea:focus::-webkit-input-placeholder {
+  color: transparent;
+  @include translate(0, -50%);
+}
+
+input[type="text"]:focus::-moz-placeholder,
+input[type="number"]:focus::-moz-placeholder,
+input[type="tel"]:focus::-moz-placeholder,
+input[type="email"]:focus::-moz-placeholder,
+input[type="password"]:focus::-moz-placeholder,
+textarea:focus::-moz-placeholder {
+  color: transparent;
+  @include translate(0, -50%);
+}
+
+input[type="text"]:focus::-ms-placeholder,
+input[type="number"]:focus::-ms-placeholder,
+input[type="tel"]:focus::-ms-placeholder,
+input[type="email"]:focus::-ms-placeholder,
+textarea:focus::-ms-placeholder,
+input[type="password"]:focus::-moz-placeholder {
+  color: transparent;
+  @include translate(0, -50%);
+}
+
+hr {
+  height: 1px;
+  padding: 0;
+  border: none;
+  margin: 20px auto;
+  background: #000;
+}
+
+mark {
+  color: #000;
+  background: #ff0;
+}
+
+pre {
+  margin: 1em 0;
+  padding: 15px;
+  border: 1px solid #555;
+  border-radius: 5px;
+  white-space: pre;
+  white-space: pre-wrap;
+  background: #efefef;
+  word-wrap: break-word;
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: 'courier new', monospace, serif;
+  font-size: 1em;
+}
+
+small {
+  font-size: 80%;
+}
+
+big {
+  font-size: 125%;
+}
+
+sub,
+sup {
+  position: relative;
+  font-size: 75%;
+  line-height: 0;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -.5em;
+  left: -0.3em;
+}
+
+sub {
+  bottom: -.25em;
+  left: -0.3em;
+}
+
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted #000;
+  cursor: help
+}
+
+ins,
+u {
+  text-decoration: underline;
+}
+
+del,
+s {
+  text-decoration: line-through;
+}
+
+dl,
+menu {
+  margin: 1em 0 1em 1em;
+  list-style: none;
+}
+
+dd + dt {
+  margin-top: 1em;
+}
+
+dd {
+  margin: 0 0 0 40px;
+}
+
+nav ol,
+nav ul,
+ol,
+ul {
+  list-style: none;
+}
+
+.clearfix:after,
+.wrapper:after,
+.row:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+//  titles
+p {
+  @include font($base-font-size, $base-line-height, $text-color);
+  padding: 15px 0 15px 0;
+  font-weight: 400;
+}
+
+h1 {
+  @include font($font-size-h1, $line-height-h1, $title-color);
+  padding: 15px 0 15px 0;
+  font-weight: 400;
+}
+
+h2 {
+  @include font($font-size-h2, $line-height-h2, $title-color);
+  padding: 15px 0 15px 0;
+  font-weight: 400;
+}
+
+h3 {
+  @include font($font-size-h3, $line-height-h3, $title-color);
+  padding: 15px 0 15px 0;
+  font-weight: 400;
+}
+
+//  text position
+.text-left {
+  text-align: left !important
+}
+
+.text-center {
+  text-align: center !important
+}
+
+.text-right {
+  text-align: right !important
+}
+
+.nowrap {
+  white-space: nowrap !important;
+}
+
+[hidden] {
+  display: none;
+}
