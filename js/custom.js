@@ -12,7 +12,7 @@ $(window).load(function () {
 function viewport() {
     var e = window,
         a = 'inner';
-    if (!( 'innerWidth' in window )) {
+    if (!('innerWidth' in window)) {
         a = 'client';
         e = document.documentElement || document.body;
     }
@@ -33,39 +33,23 @@ $(function () {
     });*/
     /* placeholder*/
 
-    $('.button-nav').click(function () {
-        $(this).toggleClass('active'),
-            $('.main-nav-list').slideToggle();
-        return false;
-    });
-
     /* components */
-
-    /*
-        if ($('.styled').length) {
-            $('.styled').styler();
-        }
-
-        if ($('.fancybox').length) {
-            $('.fancybox').fancybox({
-                margon: 10,
-                padding: 10
-            });
-        }
-
-        if ($('.slick-slider').length) {
-            $('.slick-slider').slick({
-                dots: true,
+    if ($('.slick-slider').length) {
+        $('.slick-slider').each(function () {
+            $(this).slick({
+                appendArrows: $(this).closest('section').find('.slider-nav'),
+                dots: false,
                 infinite: false,
                 speed: 300,
                 slidesToShow: 4,
-                slidesToScroll: 4,
+                slidesToScroll: 1,
+                variableWidth: true,
                 responsive: [
                     {
                         breakpoint: 1024,
                         settings: {
                             slidesToShow: 3,
-                            slidesToScroll: 3,
+                            slidesToScroll: 1,
                             infinite: true,
                             dots: true
                         }
@@ -76,21 +60,9 @@ $(function () {
                     }
                 ]
             });
-        }
-
-        if ($('.scroll').length) {
-            $(".scroll").mCustomScrollbar({
-                axis: "x",
-                theme: "dark-thin",
-                autoExpandScrollbar: true,
-                advanced: {autoExpandHorizontalScroll: true}
-            });
-        }
-        */
-
+        });
+    }
     /* components */
-
-
 });
 
 var handler = function () {

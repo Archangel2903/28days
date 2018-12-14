@@ -6,20 +6,20 @@
 ***********************************************************/
 ::selection {
   text-shadow: none;
-  color: $main-text-color;
-  background: #2597ff;
+  color: $main-text-reverse;
+  background: #d9b680;
 }
 
 ::-moz-selection {
   text-shadow: none;
-  color: $main-text-color;
-  background: #2597ff;
+  color: $main-text-reverse;
+  background: #d9b680;
 }
 
 ::-ms-selection {
   text-shadow: none;
-  color: $main-text-color;
-  background: #2597ff;
+  color: $main-text-reverse;
+  background: #d9b680;
 }
 
 body {
@@ -476,30 +476,30 @@ h3 {
 
 // project-settings
 .border-radius {
-  @include radius(9999px);
+  @include radius(250px);
   &-t {
-    @include radius(9999px 9999px 0 0);
+    @include radius(250px 250px 0 0);
   }
   &-t-l {
-    @include radius(9999px 0 0 0);
+    @include radius(250px 0 0 0);
   }
   &-t-r {
-    @include radius(0 9999px 0 0);
+    @include radius(0 250px 0 0);
   }
   &-r {
-    @include radius(0 9999px 9999px 0);
+    @include radius(0 250px 250px 0);
   }
   &-b {
-    @include radius(0 0 9999px 9999px);
+    @include radius(0 0 250px 250px);
   }
   &-b-r {
-    @include radius(0 0 9999px 0);
+    @include radius(0 0 250px 0);
   }
   &-b-l {
-    @include radius(0 0 0 9999px);
+    @include radius(0 0 0 250px);
   }
   &-l {
-    @include radius(9999px 0 0 9999px);
+    @include radius(250px 0 0 250px);
   }
 }
 
@@ -549,5 +549,9 @@ h3 {
 }
 
 .plain-text {
-
+  opacity: .5;
+  color: $text-color;
+  font-family: $base-font-family;
+  font-weight: 400;
+  font-size: 18px;
 }

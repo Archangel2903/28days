@@ -6,13 +6,18 @@ header {
   -webkit-order: 1;
   width: 100%;
   min-width: $min-width;
+  padding: 35px 0 0;
   text-align: left;
   background: #040404;
 }
 
 .header {
-  padding: 36px 0 243px;
-  background: #040404 url(../img/header-bg.jpg) no-repeat right center;
+  &.main {
+    background: #040404 url(../img/header-bg.png) no-repeat right center;
+    .header__content {
+      padding: 105px 0 245px;
+    }
+  }
   &__top {
     display: -ms-flexbox;
     display: -webkit-flex;
@@ -34,7 +39,17 @@ header {
     align-items: stretch;
   }
   &__content {
-
+    padding: 80px 0;
+  }
+  &__text {
+    @extend .plain-text;
+    margin: 0 0 25px;
+    color: $main-text-reverse;
+  }
+  &__title {
+    @extend .title;
+    max-width: 600px;
+    color: $main-text-reverse;
   }
 }
 
