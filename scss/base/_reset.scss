@@ -503,9 +503,9 @@ h3 {
 
 %button-reset {
   position: relative;
-  overflow: hidden;
   padding: 16px 25px;
   @include radius(4px);
+  overflow: hidden;
   font-weight: bold;
   font-size: 14px;
   text-transform: uppercase;

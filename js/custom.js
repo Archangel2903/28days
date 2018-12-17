@@ -39,7 +39,7 @@ $(function () {
             $(this).slick({
                 appendArrows: $(this).closest('section').find('.slider-nav'),
                 dots: false,
-                infinite: false,
+                infinite: true,
                 speed: 300,
                 slidesToShow: 4,
                 slidesToScroll: 1,
@@ -53,15 +53,20 @@ $(function () {
                             infinite: true,
                             dots: true
                         }
-                    },
-                    {
-                        breakpoint: 600,
-                        settings: "unslick"
                     }
                 ]
             });
         });
     }
+
+    $('.login-hint__slider').slick({
+        arrows: false,
+        dots: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 5000
+    });
     /* components */
 });
 
