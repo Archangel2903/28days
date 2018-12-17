@@ -6,10 +6,121 @@ footer {
   -webkit-order: 3;
   width: 100%;
   min-width: $min-width;
-  height: 80px;
   text-align: left;
 }
 
 .footer {
+  padding: 120px 0 140px;
+  background: #040404;
+}
 
+.subscription {
+  margin: 0 0 75px;
+  &__label {
+    position: relative;
+    display: block;
+  }
+  &__input {
+    display: block;
+    width: 100%;
+    height: 92px;
+    padding: 0 335px 0 30px;
+    border: 0;
+    @include radius(4px);
+    color: $main-text-reverse;
+    font-family: $custom-font-family;
+    font-size: 32px;
+    line-height: 32px;
+    background: #161616;
+    &::-webkit-input-placeholder {
+      color: $main-text-reverse;
+      font-family: $custom-font-family;
+      font-size: 32px;
+      line-height: 32px;
+    }
+    &::-moz-placeholder {
+      color: $main-text-reverse;
+      font-family: $custom-font-family;
+      font-size: 32px;
+      line-height: 32px;
+    }
+    &::-ms-placeholder {
+      color: $main-text-reverse;
+      font-family: $custom-font-family;
+      font-size: 32px;
+      line-height: 32px;
+    }
+    &:focus {
+      background: #161616 !important;
+    }
+  }
+  &__button {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    padding: 20px 30px 21px;
+    @include translate(0, -50%);
+  }
+}
+
+.footer-nav {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  margin: 0 0 120px;
+  &__contents {
+    &-link {
+      display: inline-block;
+      margin: 0 40px 0 0;
+      color: $main-text-reverse;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 22px;
+      text-transform: uppercase;
+      &:last-child {
+        margin: 0;
+      }
+      &:hover {
+        color: #d9b680;
+      }
+    }
+  }
+  &__social {
+    margin-left: auto;
+    &-link {
+      display: inline-block;
+      margin: 0 70px 0 0;
+      color: $main-text-reverse;
+      font-size: 24px;
+      &:last-child {
+        margin: 0;
+      }
+      &:hover {
+        color: #d9b680;
+      }
+    }
+  }
+}
+
+.copyright {
+  @extend .plain-text;
+  color: #fff;
+  font-size: 16px;
+  line-height: 24px;
+  white-space: pre-line;
 }

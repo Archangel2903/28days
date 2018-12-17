@@ -23,16 +23,29 @@
     border: 0;
     border-radius: 100%;
     margin-right: 15px;
+    vertical-align: middle;
     font-size: 0;
     background: #fff;
     &:last-of-type {
       margin-right: 0;
     }
+    &:before {
+      font-family: 'icomoon' !important;
+      font-size: 10px;
+    }
     &.slick-prev {
-
+      &:before {
+        content: '\e901'
+      }
     }
     &.slick-next {
-
+      &:before {
+        content: '\e902';
+      }
+    }
+    &.slick-disabled {
+      opacity: .25;
+      cursor: no-drop;
     }
   }
 }
@@ -214,10 +227,16 @@
     width: 65px;
     height: 65px;
     padding: 0;
-    border: 3px solid #fff;
+    border: 3px solid $main-text-reverse;
     @include radius(100%);
     background: rgba(0, 0, 0, 0.3);
     transform: translate(-50%, -50%);
+    &:before {
+      content: "\e900";
+      color: $main-text-reverse;
+      font-family: 'icomoon' !important;
+      font-size: 17px;
+    }
   }
   &__card-info {
     position: relative;
@@ -382,7 +401,7 @@
 
 // Blog
 .section-blog {
-
+  margin: 0 0 120px;
 }
 
 .blog {

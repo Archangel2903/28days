@@ -228,8 +228,6 @@ input[type="tel"],
 input[type="email"],
 textarea {
   -webkit-appearance: none;
-  -webkit-border-radius: 0;
-  border-radius: 0;
 }
 
 input[type="text"]:focus,
@@ -247,7 +245,7 @@ input[type="email"]:focus::-webkit-input-placeholder,
 input[type="password"]:focus::-webkit-input-placeholder,
 textarea:focus::-webkit-input-placeholder {
   color: transparent;
-  @include translate(0, -50%);
+  @include translate(0, -100%);
 }
 
 input[type="text"]:focus::-moz-placeholder,
@@ -257,7 +255,7 @@ input[type="email"]:focus::-moz-placeholder,
 input[type="password"]:focus::-moz-placeholder,
 textarea:focus::-moz-placeholder {
   color: transparent;
-  @include translate(0, -50%);
+  @include translate(0, -100%);
 }
 
 input[type="text"]:focus::-ms-placeholder,
@@ -267,7 +265,7 @@ input[type="email"]:focus::-ms-placeholder,
 textarea:focus::-ms-placeholder,
 input[type="password"]:focus::-moz-placeholder {
   color: transparent;
-  @include translate(0, -50%);
+  @include translate(0, -100%);
 }
 
 hr {

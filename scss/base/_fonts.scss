@@ -45,3 +45,125 @@
   font-weight: bold;
   font-style: normal;
 }
+
+// Icons fonts
+$icomoon-font-family: "icomoon" !default;
+$icomoon-font-path: "../fonts" !default;
+
+$icon-play: "\e900";
+$icon-left-arrow: "\e901";
+$icon-right-arrow: "\e902";
+$icon-instagram: "\e903";
+$icon-telegram: "\e904";
+$icon-vk: "\e905";
+$icon-viber: "\e906";
+$icon-google-plus: "\ea8b";
+$icon-facebook: "\ea90";
+$icon-whatsapp: "\ea93";
+$icon-twitter: "\ea96";
+$icon-youtube: "\ea9d";
+$icon-skype: "\eac5";
+
+@font-face {
+  font-family: '#{$icomoon-font-family}';
+  src: url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?hrsayp');
+  src: url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?hrsayp#iefix') format('embedded-opentype'),
+  url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?hrsayp') format('truetype'),
+  url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?hrsayp') format('woff'),
+  url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?hrsayp##{$icomoon-font-family}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+i {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: '#{$icomoon-font-family}' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-play {
+  &:before {
+    content: $icon-play;
+  }
+}
+
+.icon-left-arrow {
+  &:before {
+    content: $icon-left-arrow;
+  }
+}
+
+.icon-right-arrow {
+  &:before {
+    content: $icon-right-arrow;
+  }
+}
+
+.icon-instagram {
+  &:before {
+    content: $icon-instagram;
+  }
+}
+
+.icon-telegram {
+  &:before {
+    content: $icon-telegram;
+  }
+}
+
+.icon-vk {
+  &:before {
+    content: $icon-vk;
+  }
+}
+
+.icon-viber {
+  &:before {
+    content: $icon-viber;
+  }
+}
+
+.icon-google-plus {
+  &:before {
+    content: $icon-google-plus;
+  }
+}
+
+.icon-facebook {
+  &:before {
+    content: $icon-facebook;
+  }
+}
+
+.icon-whatsapp {
+  &:before {
+    content: $icon-whatsapp;
+  }
+}
+
+.icon-twitter {
+  &:before {
+    content: $icon-twitter;
+  }
+}
+
+.icon-youtube {
+  &:before {
+    content: $icon-youtube;
+  }
+}
+
+.icon-skype {
+  &:before {
+    content: $icon-skype;
+  }
+}
