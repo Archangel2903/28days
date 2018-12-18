@@ -14,8 +14,13 @@ header {
 .header {
   &.main {
     background: #040404 url(../img/header-bg.png) no-repeat right center;
-    .header__content {
-      padding: 105px 0 245px;
+    .header {
+      &__content {
+        padding: 105px 0 225px;
+      }
+      &__title {
+        max-width: 600px;
+      }
     }
   }
   &__top {
@@ -48,7 +53,7 @@ header {
   }
   &__title {
     @extend .title;
-    max-width: 600px;
+    margin: 0 0 20px;
     color: $main-text-reverse;
   }
 }

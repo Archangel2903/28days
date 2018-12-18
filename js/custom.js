@@ -20,7 +20,7 @@ function viewport() {
 }
 
 /* viewport width */
-$(function () {
+$(function ($) {
     /* placeholder*/
     /*$('input, textarea').each(function () {
         var placeholder = $(this).attr('placeholder');
@@ -70,11 +70,21 @@ $(function () {
     /* components */
 
     $('.input-js').on('keypress blur', function () {
-        if ( $(this).val().length ) {
+        if ($(this).val().length) {
             $(this).next().addClass('active');
         } else {
             $(this).next().removeClass('active');
         }
+    });
+
+    $('.header-menu__link[href*=#]').on('click', function (e) {
+        var $this = $(this);
+
+        $('html, body').stop().animate({
+            scrollTop: $($this.attr('href')).offset().top
+        }, 750);
+
+        e.preventDefault();
     });
 });
 
