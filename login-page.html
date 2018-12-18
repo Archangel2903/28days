@@ -56,12 +56,16 @@
                 <form action="" method="" name="" id="" class="login-form">
                     <p class="login-form__title">Вход в кабинет</p>
 
-                    <div class="login-form__input-wrap">
-                        <input type="email" id="login_email" class="login-form__input border-radius-t" placeholder="Почта">
-                    </div>
+                    <div class="login-form__fields-wrap">
+                        <label for="" class="login-form__label">
+                            <input type="email" id="login_email" class="login-form__input border-radius-t input-js">
+                            <span class="login-form__input-placeholder custom-placeholder-js">Почта</span>
+                        </label>
 
-                    <div class="login-form__input-wrap">
-                        <input type="password" id="login_pass" class="login-form__input border-radius-b" placeholder="Пароль">
+                        <label for="" class="login-form__label">
+                            <input type="password" id="login_pass" class="login-form__input border-radius-b input-js">
+                            <span class="login-form__input-placeholder custom-placeholder-js">Пароль</span>
+                        </label>
                     </div>
 
                     <label for="login_remember" class="login-form__label">
@@ -70,7 +74,7 @@
                         <span class="login-form__checkbox-text">Запомнить меня</span>
                     </label>
 
-                    <input type="button" class="login-form__submit" value="Войти">
+                    <input type="button" class="login-form__submit button-full" value="Войти" disabled>
 
                     <div class="login-form__links">
                         <a href="#01" class="login-form__link">Забыли пароль?</a>

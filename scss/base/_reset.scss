@@ -235,7 +235,7 @@ input[type="tel"]:focus,
 input[type="email"]:focus,
 input[type="password"]:focus,
 textarea:focus {
-  background: none;
+  //background: none;
 }
 
 input[type="text"]:focus::-webkit-input-placeholder,
@@ -514,6 +514,15 @@ h3 {
     border: 1px solid $button-full-color;
     color: $button-full-color;
     background: transparent;
+  }
+  &[disabled] {
+    color: rgba(4, 4, 6, 0.24);
+    background: #e5e5e5;
+    &:hover {
+      border: 1px solid #e5e5e5;
+      color: rgba(4, 4, 6, 0.24);
+      background: #e5e5e5;
+    }
   }
 }
 

@@ -68,6 +68,9 @@ $(function () {
         autoplaySpeed: 5000
     });
     /* components */
+
+    $('.input-js');
+    $('.custom-placeholder-js');
 });
 
 var handler = function () {
