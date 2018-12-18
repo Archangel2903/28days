@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1">
+    <title>Оплата</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style_content.css"/>
+</head>
+<body class="loaded">
+<!-- BODY -->
+<div class="main-wrapper">
+    <!-- CONTENT -->
+    <main class="content">
+        <section class="section-pay">
+            <div class="payment">
+                <p class="payment__text">После оплаты на вашу почту придет ссылка с доступом к курсу, необходимо будет перейти по ссылки и пройти процедуру регистрации в личном кабинете.</p>
+
+                <div class="payment__form">
+                    <div class="payment__field-wrap">
+                        <label for="payment_email" class="payment__label">
+                            <input type="email" id="payment_email" class="payment__input input-js">
+                            <span class="payment__input-placeholder custom-placeholder">Введите почту</span>
+                        </label>
+                    </div>
+
+                    <label for="send_receipt" class="payment__label check-wrap">
+                        <input type="checkbox" id="send_receipt">
+                        <span class="custom-check"></span>
+                        <span class="check-text">Отправить на почту квитанцию об оплате</span>
+                    </label>
+
+                    <label for="check_agreement" class="payment__label check-wrap">
+                        <input type="checkbox" id="check_agreement">
+                        <span class="custom-check"></span>
+                        <span class="check-text">Я принимаю условия Пользовательского соглашения и даю своё согласие сервису «28 дней» на обработку моей персональной информации на условиях, определенных Политикой конфиденциальности.</span>
+                    </label>
+
+                    <input type="button" value="оплатить" class="payment__submit button-full">
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- CONTENT END -->
+</div>
+
+<div class="icon-load"></div>
+<!-- BODY END   -->
+
+<script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
+<script type="text/javascript" src="js/jquery-migrate-1.4.1.min.js"></script>
+<script type="text/javascript" src="js/components/slick.js"></script>
+<script type="text/javascript" src="js/custom.js"></script>
+</body>
+</html>

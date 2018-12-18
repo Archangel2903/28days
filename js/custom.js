@@ -69,8 +69,13 @@ $(function () {
     });
     /* components */
 
-    $('.input-js');
-    $('.custom-placeholder-js');
+    $('.input-js').on('keypress blur', function () {
+        if ( $(this).val().length ) {
+            $(this).next().addClass('active');
+        } else {
+            $(this).next().removeClass('active');
+        }
+    });
 });
 
 var handler = function () {

@@ -197,10 +197,27 @@ html input[disabled] {
 
 input[type="checkbox"],
 input[type="radio"] {
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+  display: none;
+  width: 0;
+  height: 0;
   padding: 0;
+  border: 0;
+  margin: 0;
+  opacity: 0;
+  visibility: hidden;
   cursor: pointer;
+  &:checked + .custom-checkbox {
+    &:before {
+      content: "\e907";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      color: $button-full-color;
+      font-family: 'icomoon' !important;
+      font-size: 15px;
+      @include translate(-50%, -50%);
+    }
+  }
 }
 
 input[type="search"] {
@@ -473,6 +490,31 @@ h3 {
 }
 
 // project-settings
+%button-reset {
+  position: relative;
+  padding: 16px 25px;
+  @include radius(4px);
+  overflow: hidden;
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+  @include transition($default-transition);
+  &:hover {
+    border: 1px solid $button-full-color;
+    color: $button-full-color;
+    background: transparent;
+  }
+  &[disabled] {
+    color: rgba(4, 4, 6, 0.24);
+    background: #e5e5e5;
+    &:hover {
+      border: 1px solid #e5e5e5;
+      color: rgba(4, 4, 6, 0.24);
+      background: #e5e5e5;
+    }
+  }
+}
+
 .border-radius {
   @include radius(250px);
   &-t {
@@ -501,51 +543,18 @@ h3 {
   }
 }
 
-%button-reset {
-  position: relative;
-  padding: 16px 25px;
-  @include radius(4px);
-  overflow: hidden;
-  font-weight: bold;
-  font-size: 14px;
-  text-transform: uppercase;
-  @include transition($default-transition);
-  &:hover {
-    border: 1px solid $button-full-color;
-    color: $button-full-color;
-    background: transparent;
-  }
-  &[disabled] {
-    color: rgba(4, 4, 6, 0.24);
-    background: #e5e5e5;
-    &:hover {
-      border: 1px solid #e5e5e5;
-      color: rgba(4, 4, 6, 0.24);
-      background: #e5e5e5;
-    }
-  }
-}
-
 .button {
   &-full {
     @extend %button-reset;
     border: 1px solid transparent;
     color: $title-color;
     background: $button-full-color;
-    /*&:hover {
-      border: 1px solid $button-full-color;
-      color: $button-full-color;
-      background: transparent;
-    }*/
   }
   &-transparent {
     @extend %button-reset;
     border: 1px solid $button-transparent-color;
     color: $main-text-reverse;
     background: transparent;
-    /*&:hover {
-      background: $button-transparent-color;
-    }*/
   }
 }
 
@@ -561,4 +570,95 @@ h3 {
   font-family: $base-font-family;
   font-weight: 400;
   font-size: 18px;
+}
+
+.input-reset {
+  height: 64px;
+  padding: 30px 15px 10px;
+  border: 1px solid #e5e5e5;
+  @include radius(4px);
+  color: $title-color;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 18px;
+  background: #fff;
+  &:focus + .custom-placeholder {
+    top: 10px;
+    font-size: 12px;
+    @include translate(0%, 0%);
+  }
+}
+
+.custom-placeholder {
+  @extend .plain-text;
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  line-height: 18px;
+  font-size: 18px;
+  transform: translate(0, -50%);
+  @include transition($default-transition);
+  &.active {
+    top: 10px;
+    font-size: 12px;
+    @include translate(0%, 0%);
+  }
+}
+
+.check-wrap {
+  padding-left: 40px;
+  margin-bottom: 25px;
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  display: none;
+  width: 0;
+  height: 0;
+  padding: 0;
+  border: 0;
+  margin: 0;
+  opacity: 0;
+  visibility: hidden;
+  cursor: pointer;
+  &:checked + .custom-check {
+    &:before {
+      content: "\e907";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      color: $button-full-color;
+      font-family: 'icomoon' !important;
+      font-size: 15px;
+      @include translate(-50%, -50%);
+    }
+  }
+}
+
+.custom-check {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  border: 1px solid #e5e5e5;
+  @include radius(4px);
+  margin-right: 15px;
+  vertical-align: middle;
+  background: #fff;
+  cursor: pointer;
+  @include transition($default-transition);
+  &:hover {
+    border: 1px solid $button-full-color;
+  }
+  & + .check-text {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
