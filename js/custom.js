@@ -102,6 +102,9 @@ $(function ($) {
     });
 
     $('.auth-list').on('click', function (e) {
+        if (!$(this).hasClass('active')) {
+            e.preventDefault();
+        }
         e.stopPropagation();
         $(this).toggleClass('active').next().toggleClass('active');
     });
