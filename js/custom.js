@@ -100,6 +100,15 @@ $(function ($) {
 
         e.preventDefault();
     });
+
+    $('.auth-list').on('click', function (e) {
+        e.stopPropagation();
+        $(this).toggleClass('active').next().toggleClass('active');
+    });
+    
+    $(document).on('click', function (e) {
+        $('.auth-list').removeClass('active').next().removeClass('active');
+    })
 });
 
 var handler = function () {

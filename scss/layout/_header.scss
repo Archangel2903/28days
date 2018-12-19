@@ -85,11 +85,9 @@ header {
   -ms-flex-align: center;
   align-items: center;
   margin-left: auto;
-
   &__nav {
     display: inline-block;
   }
-
   &__nav-link {
     display: inline-block;
     margin-right: 40px;
@@ -101,10 +99,67 @@ header {
       color: #d9b680;
     }
   }
-
   &__link {
     & + .header-menu__link {
       margin-left: 25px;
+    }
+  }
+  &__authorized {
+    position: relative;
+    padding-left: 45px;
+  }
+  &__auth {
+    &-user {
+      @extend .header-menu__nav-link;
+      cursor: pointer;
+      padding-right: 15px;
+      margin: 0;
+      @include transition($default-transition);
+      &:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translate(0, -50%);
+        display: inline-block;
+        border: 8px solid #ccc;
+        border-right: 4px solid transparent;
+        border-bottom: none;
+        border-left: 4px solid transparent;
+        @include transform(translate(0, -50%));
+        @include transition($default-transition);
+      }
+      &.active {
+        &:after {
+          @include transform(translate(0, -50%) rotate3d(1, 0, 0, 180deg));
+        }
+      }
+    }
+    &-menu {
+      position: absolute;
+      top: -100%;
+      right: 0;
+      width: 160px;
+      border-radius: 4px;
+      background: #fff;
+      @include transform(rotate3d(1, 0, 0, 90deg));
+      @include transition($default-transition);
+      &.active {
+        top: calc(100% + 25px);
+        @include transform(rotate3d(0, 0, 0, 90deg));
+      }
+    }
+    &-menu-item {
+      padding: 20px;
+      border-bottom: 1px solid #e5e5e5;
+      &:last-child {
+        border: none;
+      }
+    }
+    &-menu-link {
+      @extend .header-menu__nav-link;
+      margin: 0;
+      color: $title-color;
     }
   }
 }

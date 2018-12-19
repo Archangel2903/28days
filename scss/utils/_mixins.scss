@@ -14,6 +14,14 @@
   transform: translate($x, $y);
 }
 
+@mixin transform($transform) {
+  -webkit-transform: $transform;
+  -moz-transform: $transform;
+  -ms-transform: $transform;
+  -o-transform: $transform;
+  transform: $transform;
+}
+
 @mixin radius($border-radius) {
   -webkit-border-radius: $border-radius;
   -moz-border-radius: $border-radius;

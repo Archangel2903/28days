@@ -22,19 +22,6 @@
   background: #d9b680;
 }
 
-body {
-  position: relative;
-  height: 100%;
-  padding: 0;
-  margin: 0;
-  font-family: $base-font-family;
-  font-size: $base-font-size !important;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background: $base-bg;
-}
-
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -46,6 +33,19 @@ body {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-family: $base-font-family;
+  font-size: $base-font-size !important;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: $base-bg;
 }
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code,
@@ -155,6 +155,8 @@ input[type="reset"],
 input[type="submit"] {
   outline: none;
   -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
   cursor: pointer;
 }
 
@@ -176,10 +178,16 @@ input[type="submit"] {
 
 input {
   &::-moz-placeholder {
+    vertical-align: middle;
     color: $text-color;
     @include transition($default-transition);
   }
-  &::-ms-placeholder {
+  &:-moz-placeholder {
+    vertical-align: middle;
+    color: $text-color;
+    @include transition($default-transition);
+  }
+  &:-ms-input-placeholder {
     color: $text-color;
     @include transition($default-transition);
   }
@@ -616,6 +624,7 @@ h3 {
   left: 15px;
   line-height: 18px;
   font-size: 18px;
+  //white-space: nowrap;
   transform: translate(0, -50%);
   @include transition($default-transition);
   &.active {
@@ -686,6 +695,7 @@ input[type="radio"] {
 
 .select2 {
   &.select2-container {
+    width: 100% !important;
     .selection {
       .select2-selection {
         height: 64px;
@@ -698,6 +708,7 @@ input[type="radio"] {
           left: 15px;
           font-size: 12px;
           line-height: 12px;
+          white-space: nowrap;
         }
         &__rendered {
           height: 100%;
@@ -730,7 +741,7 @@ input[type="radio"] {
 
   }
   &-dropdown {
-
+    border-color: #e5e5e5;
   }
   &-search {
     &__field {
@@ -742,7 +753,15 @@ input[type="radio"] {
 
     }
     &__option {
-
+      &[aria-selected=true] {
+        opacity: .5 !important;
+        color: $title-color !important;
+        background-color: rgba(217, 182, 128, 1) !important;
+      }
+      &--highlighted[aria-selected] {
+        background-color: #d9b680 !important;
+        color: white !important;
+      }
     }
   }
 }
