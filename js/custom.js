@@ -59,6 +59,20 @@ $(function ($) {
         });
     }
 
+    if ($('.select2').length) {
+        $('.select2').each(function () {
+            $(this).select2({
+                // placeholder: $(this).data('placeholder')
+            });
+
+            var thisPlaceholder = $(this).data('placeholder');
+
+            if (thisPlaceholder.length) {
+                $(this).next().find($('.select2-selection')).attr('data-pholder', thisPlaceholder);
+            }
+        });
+    }
+
     $('.login-hint__slider').slick({
         arrows: false,
         dots: true,

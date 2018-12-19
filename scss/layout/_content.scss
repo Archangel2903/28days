@@ -445,9 +445,6 @@
     overflow: hidden;
     background: #000000;
     @include shadow(0px 4px 10px rgba(0, 0, 0, 0.04));
-    /*&:last-child {
-      margin-right: 0;
-    }*/
   }
   &__img {
     position: absolute;
@@ -692,5 +689,92 @@
     color: $button-full-color;
     font-size: 16px;
     line-height: 22px;
+  }
+}
+
+// Registration
+.section-registration {
+
+}
+
+.registration {
+  padding: 80px 0 120px;
+  &__form {
+    display: block;
+    max-width: 735px;
+  }
+  &__field-box {
+    margin: 0 0 80px;
+  }
+  &__caption {
+    @extend .title;
+    margin: 0 0 40px;
+    font-size: 24px;
+    line-height: 24px;
+  }
+  &__text {
+    @extend .plain-text;
+    font-size: 12px;
+    line-height: 12px;
+    &.text-hint {
+      margin: 10px 0 0;
+    }
+  }
+  &__fields-group {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    margin: 0 0 30px;
+    &:last-of-type {
+      margin: 0;
+    }
+  }
+  &__label {
+    position: relative;
+    display: inline-block;
+    width: 47.6%;
+    max-width: 350px;
+    margin: 0 4.8% 0 0;
+    &:last-child {
+      margin: 0;
+    }
+  }
+  &__input {
+    @extend .input-reset;
+    width: 100%;
+  }
+  &__select {
+    width: 100%;
+  }
+  &__textarea {
+    @extend .input-reset;
+    display: block;
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 180px;
+    max-height: 250px;
+    padding: 25px 15px;
+    border: 1px solid #e7e7e7;
+    @include radius(4px);
+    margin: 30px 0 0;
+    resize: none;
+  }
+  &__submit {
+
   }
 }
