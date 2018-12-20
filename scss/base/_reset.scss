@@ -627,6 +627,12 @@ h3 {
   //white-space: nowrap;
   transform: translate(0, -50%);
   @include transition($default-transition);
+  &.require {
+    &:after {
+      content: '*';
+      color: red;
+    }
+  }
   &.active {
     top: 10px;
     line-height: 12px;
@@ -721,6 +727,7 @@ input[type="radio"] {
         &__arrow {
           top: 50%;
           @include translate(0, -50%);
+          width: 30px;
           b {
             border-width: 4px 3px 0 3px;
             border-color: #040404 transparent transparent transparent;

@@ -2,7 +2,21 @@
 <project version="4">
   <component name="PublishConfigData" serverName="tFTP">
     <serverData>
+      <paths name="dev.testHost">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
       <paths name="tFTP">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="testHost">
         <serverdata>
           <mappings>
             <mapping local="$PROJECT_DIR$" web="/" />

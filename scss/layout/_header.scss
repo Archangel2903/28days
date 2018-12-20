@@ -115,6 +115,10 @@ header {
       padding-right: 15px;
       margin: 0;
       @include transition($default-transition);
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
       &:after {
         content: '';
         position: absolute;

@@ -112,6 +112,38 @@ $(function ($) {
     $(document).on('click', function (e) {
         $('.auth-list').removeClass('active').next().removeClass('active');
     })
+
+    /**
+     * Auto Placement Items
+     * @param itemsWrap - items parent
+     * @param columns - number of column items
+     */
+    function ap(itemsWrap, columns) {
+        var containerInnerSize = itemsWrap.width(),
+            placementItems = itemsWrap.children(),
+            marginDefault = placementItems.filter(':first-child').css('margin-bottom'),
+            itemsNotMargin = placementItems.filter(':nth-child(' + columns + 'n + ' + columns + ')'),
+            placementItemsSize = placementItems.innerWidth(),
+            result = containerInnerSize - placementItemsSize * columns,
+            itemsQuantity = placementItems.length,
+            lastItemsQuantity = (itemsQuantity - columns);
+
+        placementItems.css({'margin-right': Math.floor(result / (columns - 1)), 'margin-bottom': marginDefault}).slice(lastItemsQuantity).css({'margin-bottom': 0});
+
+        itemsNotMargin.css({'margin-right': 0});
+    }
+
+    /* init ap function */
+    var $initElement = $('.autoplacement-js');
+
+    $(window).on('load resize', function () {
+        ap($initElement, 4);
+        /*if ($(window).innerWidth() > 640) {
+            ap($initElement, 4);
+        } else if ($(window).innerWidth() <= 640 && $(window).innerWidth() > 480) {
+            ap($initElement, 3);
+        }*/
+    });
 });
 
 var handler = function () {

@@ -2,10 +2,10 @@
 <project version="4">
   <component name="WebServers">
     <option name="servers">
-      <webServer id="400c1416-d4a2-46b7-9631-2aaf678bfc91" name="tFTP" url="">
+      <webServer id="400c1416-d4a2-46b7-9631-2aaf678bfc91" name="tFTP" url="http://www.zzz.com.ua">
         <fileTransfer host="www.zzz.com.ua" port="21">
           <advancedOptions>
-            <advancedOptions dataProtectionLevel="Private" shareSSLContext="true" />
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
           </advancedOptions>
           <option name="port" value="21" />
         </fileTransfer>
