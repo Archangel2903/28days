@@ -149,6 +149,10 @@ $(function ($) {
         } else if ($(window).innerWidth() <= 640 && $(window).innerWidth() > 480) {
             ap($initElement, 3);
         }*/
+
+        if ($('.sticky').length) {
+            $('.header.sticky + .content').css('padding-top', $('.header.sticky').height());
+        }
     });
 });
 

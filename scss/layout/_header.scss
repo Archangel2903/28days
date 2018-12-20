@@ -60,6 +60,7 @@ header {
     @include transition($default-transition);
     &:hover {
       border-color: $button-full-color;
+      color: $button-full-color;
     }
   }
   &.main {
@@ -74,8 +75,7 @@ header {
     }
   }
   &.sticky {
-    position: -webkit-sticky;
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: 1;
     padding: 0;
