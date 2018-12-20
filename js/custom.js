@@ -108,7 +108,7 @@ $(function ($) {
         e.stopPropagation();
         $(this).toggleClass('active').next().toggleClass('active');
     });
-    
+
     $(document).on('click', function (e) {
         $('.auth-list').removeClass('active').next().removeClass('active');
     })
@@ -128,7 +128,13 @@ $(function ($) {
             itemsQuantity = placementItems.length,
             lastItemsQuantity = (itemsQuantity - columns);
 
-        placementItems.css({'margin-right': Math.floor(result / (columns - 1)), 'margin-bottom': marginDefault}).slice(lastItemsQuantity).css({'margin-bottom': 0});
+        placementItems
+            .css({
+                'margin-right': Math.floor(result / (columns - 1)),
+                'margin-bottom': marginDefault
+            })
+            .slice(lastItemsQuantity)
+            .css({'margin-bottom': 0});
 
         itemsNotMargin.css({'margin-right': 0});
     }

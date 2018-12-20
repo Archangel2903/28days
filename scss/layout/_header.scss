@@ -12,17 +12,6 @@ header {
 }
 
 .header {
-  &.main {
-    background: #040404 url(../img/header-bg.png) no-repeat right center;
-    .header {
-      &__content {
-        padding: 105px 0 225px;
-      }
-      &__title {
-        max-width: 600px;
-      }
-    }
-  }
   &__top {
     display: -ms-flexbox;
     display: -webkit-flex;
@@ -55,6 +44,71 @@ header {
     @extend .title;
     margin: 0 0 20px;
     color: $main-text-reverse;
+  }
+  &__link-back {
+    display: inline-block;
+    width: 55px;
+    height: 55px;
+    border: 1px solid transparent;
+    @include radius(50px);
+    margin-right: 40px;
+    color: $title-color;
+    line-height: 55px;
+    text-align: center;
+    background: #ffffff;
+    @include shadow(0px 4px 10px rgba(0, 0, 0, 0.04));
+    @include transition($default-transition);
+    &:hover {
+      border-color: $button-full-color;
+    }
+  }
+  &.main {
+    background: #040404 url(../img/header-bg.png) no-repeat right center;
+    .header {
+      &__content {
+        padding: 105px 0 225px;
+      }
+      &__title {
+        max-width: 600px;
+      }
+    }
+  }
+  &.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    padding: 0;
+    background: #f2f2f2;
+    .header {
+      &__content {
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+        -webkit-align-content: flex-start;
+        -ms-flex-line-pack: start;
+        align-content: flex-start;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        padding: 40px 0;
+      }
+      &__title {
+        margin: 0;
+        color: $title-color;
+        font-size: 24px;
+        line-height: 24px;
+      }
+    }
   }
 }
 

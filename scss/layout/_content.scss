@@ -47,7 +47,7 @@
 }
 
 .pagination {
-  padding: 60px 0 20px;
+  padding: 120px 0 0;
   &__link {
     display: inline-block;
   }
@@ -497,6 +497,49 @@
     color: $main-text-reverse;
     font-size: 18px;
     line-height: 24px;
+  }
+}
+
+// Blog article
+.section-blog-article {
+  margin: 0 0 120px;
+}
+
+.blog-article {
+  &__img {
+    display: block;
+    width: 100%;
+    margin: 0 0 60px;
+    object-fit: contain;
+    object-position: center;
+  }
+  &__text {
+    display: block;
+    margin: 0 0 60px;
+    color: $title-color;
+    font-size: 18px;
+    line-height: 32px;
+    &:last-of-type {
+      margin: 0;
+    }
+  }
+  &__caption {
+    display: block;
+    margin: 0 0 30px;
+    color: $title-color;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 18px;
+  }
+  &__list {
+    padding-left: 30px;
+    margin: 0 0 60px;
+    list-style: decimal inside;
+    &-item {
+      color: $title-color;
+      font-size: 18px;
+      line-height: 32px;
+    }
   }
 }
 
