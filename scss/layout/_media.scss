@@ -1,7 +1,6 @@
 /***********************************************************
 ********************* RESPONSIVE STYLE *********************
 ***********************************************************/
-
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   body {
     min-height: 100 hv;
@@ -18,21 +17,59 @@
 }
 
 @media screen and (max-width: 1024px) {
-
-}
-
-@media screen and (min-width: 992px) {
-
-}
-
-@media screen and (max-width: 991px) {
-
-}
-
-@media screen and (min-width: 768px) and (max-width: 991px) {
-
-}
-
-@media screen and (max-width: 767px) {
-
+  .header-menu {
+    &__button-switch {
+      display: inline-block;
+    }
+    &__content {
+      position: absolute;
+      top: 0;
+      right: -70px;
+      max-width: 280px;
+      padding: 20px;
+      background: rgba(0, 0, 0, .75);
+      @include transform( rotate3d(0, 1, 0, 100grad) );
+      @include transition($default-transition);
+      &.is-open {
+        top: 0;
+        right: 70px;
+        z-index: 5;
+        @include transform( rotate3d(0, 0, 0, 100grad) );
+      }
+    }
+    &__nav {
+      display: block;
+      width: 100%;
+      margin: 0 0 30px;
+      order: 2;
+    }
+    &__nav-link {
+      display: block;
+      margin: 0 0 20px;
+    }
+    &__link {
+      display: block;
+      width: 100%;
+      margin: 25px 0;
+      text-align: center;
+      &:nth-of-type(1) {
+        order: 4;
+        margin: 25px 0 0;
+      }
+      &:nth-of-type(2) {
+        order: 3;
+      }
+    }
+    &__authorized {
+      order: 1;
+      padding: 0;
+      margin: 0 0 25px;
+    }
+    &__auth-user {
+      margin: 0;
+    }
+    &__auth-menu-link {
+      margin: 0;
+    }
+  }
 }
