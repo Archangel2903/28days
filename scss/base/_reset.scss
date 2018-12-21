@@ -577,10 +577,16 @@ h3 {
     color: $title-color;
     background: $button-full-color;
   }
-  &-transparent {
+  &-transparent-bright {
     @extend %button-reset;
-    border: 1px solid $button-transparent-color;
+    border: 1px solid rgba(255, 255, 255, 0.4);
     color: $main-text-reverse;
+    background: transparent;
+  }
+  &-transparent-dark {
+    @extend %button-reset;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    color: $main-text-color;
     background: transparent;
   }
 }

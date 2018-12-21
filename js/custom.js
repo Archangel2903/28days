@@ -109,9 +109,13 @@ $(function ($) {
         $(this).toggleClass('active').next().toggleClass('active');
     });
 
+    $('.header-menu__auth-menu').on('click', function (e) {
+        e.stopPropagation();
+    });
+
     $(document).on('click', function (e) {
         $('.auth-list').removeClass('active').next().removeClass('active');
-    })
+    });
 
     /**
      * Auto Placement Items
