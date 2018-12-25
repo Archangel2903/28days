@@ -191,10 +191,12 @@
 
 .reviews {
   &__head {
+    position: relative;
     margin: 0 0 60px;
   }
   &__title {
     @extend .title;
+    padding-right: 140px;
     margin: 0 0 25px;
     color: $main-text-reverse;
   }
@@ -257,7 +259,7 @@
     @extend .title;
     margin: 0 0 25px;
     color: $main-text-reverse;
-    font-size: 32px;
+    font-size: 32px !important;
     line-height: 32px;
   }
   &__card-text {
@@ -284,12 +286,13 @@
 }
 
 .faq {
-  width: 200%;
   &__head {
+    position: relative;
     margin: 0 0 60px;
   }
   &__title {
     @extend .title;
+    padding-right: 140px;
   }
   &__content {
     display: -ms-flexbox;
@@ -310,6 +313,7 @@
     -webkit-align-items: stretch;
     -ms-flex-align: stretch;
     align-items: stretch;
+    width: 200%;
   }
   &__box {
     display: inline-block;
@@ -325,7 +329,7 @@
   &__caption {
     @extend .title;
     margin: 0 0 25px;
-    font-size: 18px;
+    font-size: 18px !important;
     line-height: 24px;
   }
   &__text {
@@ -376,9 +380,9 @@
     display: inline-block;
     width: 31.25%;
     min-height: 400px;
-    padding: 40px 40px 110px;
+    padding: 40px 40px 200px;
     @include radius(10px);
-    margin: 0 2% 0 0;
+    margin: 0 3% 0 0;
     background: #000000;
     &:last-child {
       margin-right: 0;
@@ -388,7 +392,7 @@
     @extend .title;
     margin: 0 0 20px;
     color: $main-text-reverse;
-    font-size: 32px;
+    font-size: 32px !important;
     line-height: 32px;
   }
   &__text {
@@ -396,6 +400,19 @@
     color: $main-text-reverse;
     font-size: 16px;
     line-height: 24px;
+  }
+  &__price {
+    @extend .title;
+    position: absolute;
+    bottom: 130px;
+    color: #fff;
+    font-size: 50px !important;
+    &:after {
+      content: '₽';
+      display: inline-block;
+      font-size: 40px;
+      line-height: 40px;
+    }
   }
   &__button {
     @extend .button-full;
@@ -414,10 +431,12 @@
 
 .blog {
   &__head {
+    position: relative;
     margin: 0 0 60px;
   }
   &__title {
     @extend .title;
+    padding-right: 140px;
     margin: 0 0 30px;
   }
   &__subtitle {
@@ -440,9 +459,9 @@
       -webkit-align-content: stretch;
       -ms-flex-line-pack: stretch;
       align-content: stretch;
-      -webkit-align-items: stretch;
-      -ms-flex-align: stretch;
-      align-items: stretch;
+      -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+      align-items: flex-start;
       padding: 120px 0 0;
       .blog__article {
         margin: 0 0 30px;
@@ -500,7 +519,7 @@
     -ms-flex-item-align: end;
     align-self: flex-end;
     color: $main-text-reverse;
-    font-size: 18px;
+    font-size: 18px !important;
     line-height: 24px;
   }
 }
@@ -625,7 +644,7 @@
     @extend .title;
     margin: 0 0 30px;
     color: $main-text-reverse;
-    font-size: 32px;
+    font-size: 32px !important;
     line-height: 36px;
     text-align: center;
   }
@@ -827,7 +846,7 @@
   &__caption {
     @extend .title;
     margin: 0 0 40px;
-    font-size: 24px;
+    font-size: 24px !important;
     line-height: 24px;
   }
   &__text {

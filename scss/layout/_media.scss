@@ -14,6 +14,10 @@
   .wrapper {
     padding: 0 20px;
   }
+
+  .slider-nav {
+    right: 20px;
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -25,16 +29,16 @@
       position: absolute;
       top: 0;
       right: -70px;
+      z-index: 5;
       max-width: 280px;
       padding: 20px;
       background: rgba(0, 0, 0, .75);
-      @include transform( rotate3d(0, 1, 0, 100grad) );
+      @include transform(rotate3d(0, 1, 0, 100grad));
       @include transition($default-transition);
       &.is-open {
         top: 0;
         right: 70px;
-        z-index: 5;
-        @include transform( rotate3d(0, 0, 0, 100grad) );
+        @include transform(rotate3d(0, 0, 0, 100grad));
       }
     }
     &__nav {
@@ -70,6 +74,277 @@
     }
     &__auth-menu-link {
       margin: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .results {
+    &__indicators {
+      -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+      justify-content: space-around;
+      margin: 0 0 80px;
+      &-box {
+        width: 47%;
+        max-width: none;
+        padding: 75px 15px 40px;
+        margin: 0 0 55px;
+      }
+      &-val {
+        font-size: 90px;
+      }
+    }
+    &__description {
+      -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+      justify-content: space-around;
+      &-box {
+        width: 50%;
+        margin: 0 0 60px;
+      }
+    }
+  }
+
+  .tariff {
+    &__box {
+      padding: 30px 20px 200px;
+    }
+    &__button {
+      left: 20px;
+      width: calc(100% - 40px);
+    }
+  }
+
+  .blog {
+    &__article {
+      width: 33%;
+      max-width: none !important;
+    }
+  }
+
+  .footer-nav {
+    &__contents-link {
+      display: block;
+      margin: 0 0 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .slider-nav {
+    top: calc(100% + 10px);
+  }
+
+  .results {
+    &__description {
+      &-box {
+        width: 100%;
+        max-width: none;
+      }
+    }
+  }
+
+  .section-reviews {
+    padding: 60px 0 0;
+  }
+
+  .reviews {
+    &__head {
+      margin: 0 0 80px;
+    }
+    &__title {
+      padding: 0;
+    }
+  }
+
+  .faq {
+    &__head {
+      margin: 0 0 80px;
+    }
+    &__title {
+      padding: 0;
+    }
+  }
+
+  .tariff {
+    &__box {
+      width: 100%;
+      min-height: 350px;
+      margin: 0 auto 25px;
+    }
+  }
+
+  .blog {
+    &__head {
+      margin: 0 0 80px;
+    }
+    &__title {
+      padding: 0;
+    }
+  }
+
+  .login-hint {
+    width: 100%;
+  }
+
+  .login-wrapper {
+    width: 100%;
+  }
+
+  .blog {
+    &__article {
+      width: 48%;
+    }
+  }
+
+  .subscription {
+    &__input {
+      padding-right: 115px;
+    }
+    &__button {
+      padding: 15px 30px 15px;
+      font-size: 0;
+      [class*="icon"] {
+        display: inline-block;
+        font-size: 26px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .footer-nav {
+    &__contents {
+      display: block;
+      width: 100%;
+      margin: 0 0 60px;
+      text-align: center;
+    }
+    &__social {
+      margin: 0 auto;
+    }
+  }
+
+  .registration {
+    &__field-box {
+      text-align: center;
+    }
+    &__label {
+      width: 100%;
+      max-width: none;
+      margin: 0 auto 35px;
+      &:last-child {
+        margin: 0 auto;
+      }
+    }
+    &__textarea {
+      width: 100%;
+    }
+  }
+
+  .select2 {
+    &.select2-container {
+      text-align: left;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .title {
+    font-size: 38px;
+  }
+
+  .results {
+    &__indicators {
+      &-box {
+        width: 100%;
+      }
+      &-val {
+        font-size: 80px;
+      }
+    }
+    &__description {
+      &-caption {
+        font-size: 18px;
+      }
+    }
+  }
+
+  .reviews {
+    &__content {
+      width: auto;
+    }
+  }
+
+  .faq {
+    &__content {
+      width: auto;
+    }
+  }
+
+  .login-hint {
+    &__slider {
+      width: 80%;
+    }
+  }
+
+  .login-form {
+    padding: 160px 20px 0;
+    &__title {
+      font-size: 30px !important;
+    }
+    &__link {
+      margin-right: 10px;
+    }
+  }
+
+  .blog {
+    &__article {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .title {
+    font-size: 28px;
+  }
+
+  .header-menu {
+    &__button-switch {
+      z-index: 6;
+    }
+    &__content {
+      &.is-open {
+        right: 20px;
+      }
+    }
+  }
+
+  .results {
+    &__indicators-val {
+      font-size: 80px;
+    }
+    &__description-caption {
+      font-size: 18px;
+    }
+  }
+
+  .reviews {
+    &__card {
+      max-width: 280px;
+    }
+    &__photo {
+      object-fit: cover;
+      object-position: top center;
+    }
+  }
+
+  .faq {
+    &__box {
+      max-width: 280px;
+      margin-right: 60px;
     }
   }
 }

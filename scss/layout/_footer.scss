@@ -61,6 +61,9 @@ footer {
     right: 15px;
     padding: 20px 30px 21px;
     @include translate(0, -50%);
+    [class*="icon"] {
+      display: none;
+    }
   }
 }
 

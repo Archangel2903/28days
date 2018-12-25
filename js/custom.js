@@ -46,10 +46,25 @@ $(function ($) {
                 variableWidth: true,
                 responsive: [
                     {
-                        breakpoint: 1024,
+                        breakpoint: 1025,
                         settings: {
                             slidesToShow: 3,
                             slidesToScroll: 1
+                        }
+                    },
+                    {
+                        breakpoint: 769,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 1
+                        }
+                    },
+                    {
+                        breakpoint: 481,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                            centerMode: true
                         }
                     }
                 ]
@@ -77,7 +92,17 @@ $(function ($) {
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 5000
+        autoplaySpeed: 5000,
+        /*responsive: [
+            {
+                breakpoint: 395,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    centerMode: true
+                }
+            }
+        ]*/
     });
     /* components */
 
@@ -155,12 +180,15 @@ $(function ($) {
     var $initElement = $('.autoplacement-js');
 
     $(window).on('load resize', function () {
-        ap($initElement, 4);
-        /*if ($(window).innerWidth() > 640) {
+        if ($(window).innerWidth() > 991) {
             ap($initElement, 4);
-        } else if ($(window).innerWidth() <= 640 && $(window).innerWidth() > 480) {
+        } else if ($(window).innerWidth() <= 991 && $(window).innerWidth() > 768) {
             ap($initElement, 3);
-        }*/
+        } else if ($(window).innerWidth() <= 768 && $(window).innerWidth() > 480) {
+            ap($initElement, 2);
+        } else if ($(window).innerWidth() <= 480 && $(window).innerWidth() > 0) {
+            ap($initElement, 1);
+        }
 
         if ($('.sticky').length) {
             $('.header.sticky + .content').css('padding-top', $('.header.sticky').height());
