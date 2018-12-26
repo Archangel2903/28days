@@ -55,6 +55,9 @@
   padding: 120px 0 0;
   &__link {
     display: inline-block;
+    [class*="icon"] {
+      font-size: 0;
+    }
   }
 }
 

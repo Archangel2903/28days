@@ -18,6 +18,12 @@
   .slider-nav {
     right: 20px;
   }
+
+  .footer-nav {
+    &__social {
+      padding-right: 30px;
+    }
+  }
 }
 
 @media screen and (max-width: 1024px) {
@@ -79,6 +85,10 @@
 }
 
 @media screen and (max-width: 991px) {
+  .pagination {
+    text-align: center;
+  }
+
   .header {
     &.main {
       -webkit-background-size: cover;
@@ -150,6 +160,18 @@
 @media screen and (max-width: 768px) {
   .slider-nav {
     top: calc(100% + 10px);
+  }
+
+  .pagination {
+    &__link {
+      &:first-child, &:last-child {
+        font-size: 0;
+      }
+      [class*="icon"] {
+        display: inline-block;
+        font-size: 14px;
+      }
+    }
   }
 
   .header {
@@ -247,15 +269,9 @@
 }
 
 @media screen and (max-width: 600px) {
-  .footer-nav {
-    &__contents {
-      display: block;
-      width: 100%;
-      margin: 0 0 60px;
-      text-align: center;
-    }
-    &__social {
-      margin: 0 auto;
+  .pagination {
+    &__link {
+      padding: 16px 15px;
     }
   }
 
@@ -288,6 +304,19 @@
 
   .payment {
     padding: 80px 20px;
+  }
+
+  .footer-nav {
+    &__contents {
+      display: block;
+      width: 100%;
+      margin: 0 0 60px;
+      text-align: center;
+    }
+    &__social {
+      margin: 0 auto;
+      padding: 0;
+    }
   }
 }
 
@@ -354,6 +383,12 @@
 @media screen and (max-width: 425px) {
   .title {
     font-size: 28px;
+  }
+
+  .pagination {
+    &__link {
+      padding: 16px 10px;
+    }
   }
 
   .header-menu {
