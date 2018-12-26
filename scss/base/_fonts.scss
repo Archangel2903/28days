@@ -58,8 +58,8 @@ $icon-cross: "\e908";
 $icon-person: "\e906";
 $icon-check: "\e907";
 $icon-play: "\e900";
-$icon-left-arrow-around: "\e901";
-$icon-right-arrow-around: "\e902";
+$icon-left-arrow: "\e901";
+$icon-right-arrow: "\e902";
 $icon-vk: "\e903";
 $icon-telegram: "\e904";
 $icon-instagram: "\e905";
@@ -138,14 +138,14 @@ $icon-pinterest: "\ead2";
     content: $icon-play;
   }
 }
-.icon-left-arrow-around {
+.icon-left-arrow {
   &:before {
-    content: $icon-left-arrow-around;
+    content: $icon-left-arrow;
   }
 }
-.icon-right-arrow-around {
+.icon-right-arrow {
   &:before {
-    content: $icon-right-arrow-around;
+    content: $icon-right-arrow;
   }
 }
 .icon-vk {

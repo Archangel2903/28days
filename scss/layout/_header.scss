@@ -66,8 +66,8 @@ header {
   }
   &.main {
     background: #040404 url(../img/header-bg.png) no-repeat right center;
-    -webkit-background-size: cover;
-    background-size: cover;
+    -webkit-background-size: contain;
+    background-size: contain;
     .header {
       &__content {
         padding: 105px 0 225px;
@@ -106,6 +106,7 @@ header {
         padding: 40px 0;
       }
       &__title {
+        width: calc(100% - 95px);
         margin: 0;
         color: $title-color;
         font-size: 24px;
