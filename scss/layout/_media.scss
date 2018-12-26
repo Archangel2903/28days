@@ -164,7 +164,7 @@
 
   .pagination {
     &__link {
-      &:first-child, &:last-child {
+      &.first-button, &.last-button {
         font-size: 0;
       }
       [class*="icon"] {

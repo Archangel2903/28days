@@ -919,3 +919,14 @@
 
   }
 }
+
+// Account
+.section-account {
+  padding: 120px 0;
+}
+
+.account {
+  &__title {
+    @extend .title;
+  }
+}
