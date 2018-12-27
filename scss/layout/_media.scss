@@ -235,6 +235,10 @@
     }
   }
 
+  .section-login {
+    padding: 0 0 120px;
+  }
+
   .login-hint {
     width: 100%;
   }
@@ -388,6 +392,12 @@
   .pagination {
     &__link {
       padding: 16px 10px;
+    }
+  }
+
+  .header {
+    &__content {
+      padding: 80px 0 120px;
     }
   }
 

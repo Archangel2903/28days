@@ -55,6 +55,11 @@
   padding: 120px 0 0;
   &__link {
     display: inline-block;
+    &.active {
+      border: 1px solid $button-full-color;
+      color: $button-full-color;
+      background: transparent
+    }
     [class*="icon"] {
       font-size: 0;
     }

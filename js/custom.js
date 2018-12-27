@@ -182,16 +182,38 @@ $(function ($) {
     $(window).on('load resize', function () {
         if ($(window).innerWidth() > 991) {
             ap($initElement, 4);
-        } else if ($(window).innerWidth() <= 991 && $(window).innerWidth() > 768) {
+        }
+        else if ($(window).innerWidth() <= 991 && $(window).innerWidth() > 768) {
             ap($initElement, 3);
-        } else if ($(window).innerWidth() <= 768 && $(window).innerWidth() > 480) {
+        }
+        else if ($(window).innerWidth() <= 768 && $(window).innerWidth() > 480) {
             ap($initElement, 2);
-        } else if ($(window).innerWidth() <= 480 && $(window).innerWidth() > 0) {
+        }
+        else if ($(window).innerWidth() <= 480 && $(window).innerWidth() > 0) {
             ap($initElement, 1);
         }
 
         if ($('.sticky').length) {
             $('.header.sticky + .content').css('padding-top', $('.header.sticky').height());
+        }
+    });
+
+    $(document).on('load scroll', function (e) {
+        if ($(document).scrollTop() >= 300) {
+            $('.results__indicators-val:not(.active)').spincrement({
+                from: 0,
+                to: false,
+                decimalPlaces: 0,
+                decimalPoint: '.',
+                thousandSeparator: ',',
+                duration: 4000, // ms; TOTAL length animation
+                leeway: 100, // percent of duraion
+                easing: 'spincrementEasing',
+                fade: true,
+                complete: function (e) {
+                    e.addClass('active');
+                }
+            });
         }
     });
 });
