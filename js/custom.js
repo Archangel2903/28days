@@ -206,7 +206,7 @@ $(function ($) {
                 decimalPlaces: 0,
                 decimalPoint: '.',
                 thousandSeparator: ',',
-                duration: 4000, // ms; TOTAL length animation
+                duration: 6000, // ms; TOTAL length animation
                 leeway: 100, // percent of duraion
                 easing: 'spincrementEasing',
                 fade: true,
