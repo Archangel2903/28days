@@ -44,6 +44,13 @@ header {
     @extend .title;
     margin: 0 0 20px;
     color: $main-text-reverse;
+    span {
+      @extend .plain-text;
+      display: block;
+      width: 100%;
+      margin: 0 0 8px;
+      line-height: 16px;
+    }
   }
   &__link-back {
     display: inline-block;

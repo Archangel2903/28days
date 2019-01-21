@@ -104,6 +104,12 @@ $(function ($) {
             }
         ]*/
     });
+
+    $('.progress-slider').slick({
+        infinity: false,
+        slidesToShow: 7,
+        slidesToScroll: 1,
+    });
     /* components */
 
     $('.burger-js').on('click', function (e) {
@@ -215,6 +221,11 @@ $(function ($) {
                 }
             });
         }
+    });
+
+    // Accordion
+    $('.account__accordion-item-trigger').on('click', function () {
+        $(this).parent().toggleClass('active').next().slideToggle(350);
     });
 });
 

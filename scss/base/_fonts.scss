@@ -50,19 +50,21 @@
 $icomoon-font-family: "icomoon" !default;
 $icomoon-font-path: "../fonts" !default;
 
-$icon-mail-envelope-closed: "\e909";
-$icon-mail-envelope-closed1: "\e90a";
-$icon-mail-envelope-open: "\e90b";
-$icon-mail-envelope-open1: "\e90c";
-$icon-cross: "\e908";
-$icon-person: "\e906";
-$icon-check: "\e907";
-$icon-play: "\e900";
-$icon-left-arrow: "\e901";
-$icon-right-arrow: "\e902";
-$icon-vk: "\e903";
-$icon-telegram: "\e904";
-$icon-instagram: "\e905";
+$icon-lock: "\e900";
+$icon-unlock: "\e901";
+$icon-play: "\e902";
+$icon-left-arrow-around: "\e903";
+$icon-right-arrow-around: "\e904";
+$icon-vk: "\e905";
+$icon-telegram: "\e906";
+$icon-instagram: "\e907";
+$icon-person: "\e908";
+$icon-check: "\e909";
+$icon-cross: "\e90a";
+$icon-mail-envelope-closed: "\e90b";
+$icon-mail-envelope-closed1: "\e90c";
+$icon-mail-envelope-open: "\e90d";
+$icon-mail-envelope-open1: "\e90e";
 $icon-search: "\e986";
 $icon-google-plus: "\ea8b";
 $icon-facebook: "\ea90";
@@ -74,11 +76,11 @@ $icon-pinterest: "\ead2";
 
 @font-face {
   font-family: '#{$icomoon-font-family}';
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?bctxfu');
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?bctxfu#iefix') format('embedded-opentype'),
-  url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?bctxfu') format('truetype'),
-  url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?bctxfu') format('woff'),
-  url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?bctxfu##{$icomoon-font-family}') format('svg');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?d7evv1');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?d7evv1#iefix') format('embedded-opentype'),
+  url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?d7evv1') format('truetype'),
+  url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?d7evv1') format('woff'),
+  url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?d7evv1##{$icomoon-font-family}') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -98,6 +100,61 @@ $icon-pinterest: "\ead2";
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-lock {
+  &:before {
+    content: $icon-lock;
+  }
+}
+.icon-unlock {
+  &:before {
+    content: $icon-unlock;
+  }
+}
+.icon-play {
+  &:before {
+    content: $icon-play;
+  }
+}
+.icon-left-arrow {
+  &:before {
+    content: $icon-left-arrow-around;
+  }
+}
+.icon-right-arrow {
+  &:before {
+    content: $icon-right-arrow-around;
+  }
+}
+.icon-vk {
+  &:before {
+    content: $icon-vk;
+  }
+}
+.icon-telegram {
+  &:before {
+    content: $icon-telegram;
+  }
+}
+.icon-instagram {
+  &:before {
+    content: $icon-instagram;
+  }
+}
+.icon-person {
+  &:before {
+    content: $icon-person;
+  }
+}
+.icon-check {
+  &:before {
+    content: $icon-check;
+  }
+}
+.icon-cross {
+  &:before {
+    content: $icon-cross;
+  }
+}
 .icon-mail-envelope-closed {
   &:before {
     content: $icon-mail-envelope-closed;
@@ -116,51 +173,6 @@ $icon-pinterest: "\ead2";
 .icon-mail-envelope-open1 {
   &:before {
     content: $icon-mail-envelope-open1;
-  }
-}
-.icon-cross {
-  &:before {
-    content: $icon-cross;
-  }
-}
-.icon-person {
-  &:before {
-    content: $icon-person;
-  }
-}
-.icon-check {
-  &:before {
-    content: $icon-check;
-  }
-}
-.icon-play {
-  &:before {
-    content: $icon-play;
-  }
-}
-.icon-left-arrow {
-  &:before {
-    content: $icon-left-arrow;
-  }
-}
-.icon-right-arrow {
-  &:before {
-    content: $icon-right-arrow;
-  }
-}
-.icon-vk {
-  &:before {
-    content: $icon-vk;
-  }
-}
-.icon-telegram {
-  &:before {
-    content: $icon-telegram;
-  }
-}
-.icon-instagram {
-  &:before {
-    content: $icon-instagram;
   }
 }
 .icon-search {

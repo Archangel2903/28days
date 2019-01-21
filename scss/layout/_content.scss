@@ -36,12 +36,12 @@
     }
     &.slick-prev {
       &:before {
-        content: '\e901'
+        content: '\e903'
       }
     }
     &.slick-next {
       &:before {
-        content: '\e902';
+        content: '\e904';
       }
     }
     &:hover {
@@ -250,7 +250,7 @@
     background: rgba(0, 0, 0, 0.3);
     transform: translate(-50%, -50%);
     &:before {
-      content: "\e900";
+      content: "\e902";
       color: $main-text-reverse;
       font-family: 'icomoon' !important;
       font-size: 17px;
@@ -544,6 +544,52 @@
     margin: 0 0 60px;
     object-fit: contain;
     object-position: center;
+  }
+  &__text {
+    display: block;
+    margin: 0 0 60px;
+    color: $title-color;
+    font-size: 18px;
+    line-height: 32px;
+    &:last-of-type {
+      margin: 0;
+    }
+  }
+  &__caption {
+    display: block;
+    margin: 0 0 30px;
+    color: $title-color;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 18px;
+  }
+  &__list {
+    padding-left: 30px;
+    margin: 0 0 60px;
+    list-style: decimal inside;
+    &-item {
+      color: $title-color;
+      font-size: 18px;
+      line-height: 32px;
+    }
+  }
+}
+
+// Article
+.section-article {
+  margin: 0 0 120px;
+}
+
+.article {
+  &__img {
+    display: block;
+    width: 100%;
+    margin: 0 0 60px;
+    object-fit: contain;
+    object-position: center;
+  }
+  &__content {
+    padding: 0 95px;
   }
   &__text {
     display: block;
@@ -933,5 +979,170 @@
 .account {
   &__title {
     @extend .title;
+  }
+  &__accordion {
+    &-list {
+
+    }
+    &-item {
+      @include radius(10px);
+      margin: 0 0 25px;
+      background: #FFFFFF;
+      @include shadow(0 4px 10px rgba(0, 0, 0, 0.04));
+      &:last-child {
+        margin: 0;
+      }
+    }
+    &-item-caption {
+      position: relative;
+      padding: 32px;
+      @extend .title;
+      font-size: 24px;
+      line-height: 24px;
+      &.active {
+        .account__accordion-item-trigger {
+          @include transform(translate(0, -50%) rotate3d(1, 0, 0, 200grad));
+        }
+      }
+    }
+    &-item-trigger {
+      position: absolute;
+      top: 50%;
+      right: 25px;
+      display: inline-block;
+      width: 48px;
+      height: 48px;
+      border-radius: 100%;
+      background: rgba(4, 4, 6, 0.04);
+      cursor: pointer;
+      @include translate(0, -50%);
+      @include transition($default-transition);
+      &:before {
+        content: '\e903';
+        font-family: 'icomoon' !important;
+        font-size: 11px;
+        @include center_transform;
+        @include transform(rotate(-90deg) translate(-50%, -50%));
+        transform-origin: 0% 0%;
+      }
+    }
+    &-content {
+      display: none;
+      padding: 0 25px;
+      border-top: 1px solid #d7d7d7;
+    }
+    &-content-item {
+      display: block;
+      padding: 23px 10px;
+      border-top: 1px solid #d7d7d7;
+      &:first-child {
+        border: none;
+      }
+      &:hover {
+        .account__accordion-content-item-text {
+          color: $button-full-color;
+        }
+      }
+    }
+    &-content-item-caption {
+      display: inline-block;
+      margin: 0 0 10px;
+      @extend .plain-text;
+      font-size: 16px;
+      line-height: 16px;
+    }
+    &-content-item-text {
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 18px;
+      @include transition($default-transition);
+    }
+  }
+}
+
+.progress-slider {
+  position: relative;
+  padding-right: 90px;
+  .slick-arrow {
+    position: absolute;
+    right: 0;
+    display: inline-block;
+    width: 55px;
+    height: 55px;
+    padding: 0;
+    border: 1px solid transparent;
+    border-radius: 100%;
+    vertical-align: middle;
+    font-size: 0;
+    background: #fff;
+    @include transition($default-transition);
+    &:before {
+      font-family: 'icomoon' !important;
+      font-size: 10px;
+    }
+    &.slick-prev {
+      bottom: 0;
+      &:before {
+        content: '\e903'
+      }
+    }
+    &.slick-next {
+      top: 0;
+      &:before {
+        content: '\e904';
+      }
+    }
+    &:hover {
+      border-color: #d9b680;
+      color: #d9b680;
+    }
+  }
+  &__ico {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    &:before {
+      content: '\e900';
+      font-family: "icomoon" !important;
+      font-size: 23px;
+      @include transition($default-transition);
+    }
+  }
+  &__box {
+    position: relative;
+    display: inline-block;
+    width: 120px;
+    height: 120px;
+    padding: 38px 0 30px;
+    border: 1px solid #2C2C2E;
+    border-radius: 10px;
+    margin-right: 30px;
+    color: #2C2C2E;
+    text-align: center;
+    @include transition($default-transition);
+
+    &.active {
+      border-color: #ffffff;
+      background: #ffffff;
+      .progress-slider {
+        &__ico {
+          color: #d9b680;
+          &:before {
+            content: '\e901';
+          }
+        }
+      }
+    }
+  }
+  &__number {
+    margin: 0 0 12px;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 24px;
+  }
+  &__text {
+    font-size: 16px;
+    line-height: 16px;
   }
 }
