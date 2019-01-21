@@ -109,6 +109,49 @@ $(function ($) {
         infinity: false,
         slidesToShow: 7,
         slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 5
+                }
+            },
+            {
+                breakpoint: 769,
+                settings: {
+                    arrows: false,
+                    slidesToShow: 5
+                }
+            },
+            {
+                breakpoint: 601,
+                settings: {
+                    arrows: false,
+                    slidesToShow: 4
+                }
+            },
+            {
+                breakpoint: 481,
+                settings: {
+                    arrows: false,
+                    slidesToShow: 3
+                }
+            },
+            {
+                breakpoint: 481,
+                settings: {
+                    arrows: false,
+                    slidesToShow: 3
+                }
+            },
+            {
+                breakpoint: 376,
+                settings: {
+                    arrows: false,
+                    slidesToShow: 2
+                }
+            }
+        ]
     });
     /* components */
 

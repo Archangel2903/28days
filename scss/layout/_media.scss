@@ -85,6 +85,34 @@
 }
 
 @media screen and (max-width: 991px) {
+  .border-radius {
+    @include radius(150px);
+    &-t {
+      @include radius(150px 150px 0 0);
+    }
+    &-t-l {
+      @include radius(150px 0 0 0);
+    }
+    &-t-r {
+      @include radius(0 150px 0 0);
+    }
+    &-r {
+      @include radius(0 150px 150px 0);
+    }
+    &-b {
+      @include radius(0 0 150px 150px);
+    }
+    &-b-r {
+      @include radius(0 0 150px 0);
+    }
+    &-b-l {
+      @include radius(0 0 0 150px);
+    }
+    &-l {
+      @include radius(150px 0 0 150px);
+    }
+  }
+
   .pagination {
     text-align: center;
   }
@@ -98,6 +126,12 @@
       .header__content {
         padding: 20px 0;
       }
+    }
+  }
+
+  .progress-slider {
+    &__box {
+      margin-right: 15px;
     }
   }
 
@@ -165,34 +199,6 @@
 }
 
 @media screen and (max-width: 768px) {
-  .border-radius {
-    @include radius(150px);
-    &-t {
-      @include radius(150px 150px 0 0);
-    }
-    &-t-l {
-      @include radius(150px 0 0 0);
-    }
-    &-t-r {
-      @include radius(0 150px 0 0);
-    }
-    &-r {
-      @include radius(0 150px 150px 0);
-    }
-    &-b {
-      @include radius(0 0 150px 150px);
-    }
-    &-b-r {
-      @include radius(0 0 150px 0);
-    }
-    &-b-l {
-      @include radius(0 0 0 150px);
-    }
-    &-l {
-      @include radius(150px 0 0 150px);
-    }
-  }
-
   .slider-nav {
     top: calc(100% + 10px);
   }
@@ -220,6 +226,10 @@
         }
       }
     }
+  }
+
+  .progress-slider {
+    padding: 0;
   }
 
   .results {
@@ -466,6 +476,30 @@
           width: 100%;
         }
       }
+    }
+  }
+
+  .account {
+    &__accordion-item-caption {
+      padding: 23px;
+      font-size: 18px !important;
+    }
+    &__accordion-item-trigger {
+      width: 32px;
+      height: 32px;
+    }
+    &__accordion-content {
+      padding: 0;
+    }
+    &__accordion-content-item {
+      padding: 15px;
+    }
+    &__accordion-content-item-caption {
+      font-size: 14px;
+    }
+    &__accordion-content-item-text {
+      font-size: 14px;
+      line-height: normal;
     }
   }
 }
