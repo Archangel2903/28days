@@ -6,7 +6,7 @@ header {
   -webkit-order: 1;
   width: 100%;
   min-width: $min-width;
-  padding: 35px 0 0;
+  padding: 35px 0;
   text-align: left;
   background: #040404;
 }
@@ -33,7 +33,7 @@ header {
     align-items: stretch;
   }
   &__content {
-    padding: 80px 0;
+    padding: 80px 0 45px;
   }
   &__text {
     @extend .plain-text;
@@ -77,7 +77,7 @@ header {
     background-size: contain;
     .header {
       &__content {
-        padding: 105px 0 225px;
+        padding: 105px 0 190px;
       }
       &__title {
         max-width: 600px;

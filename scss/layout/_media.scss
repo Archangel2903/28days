@@ -140,15 +140,15 @@
       -webkit-justify-content: space-around;
       -ms-flex-pack: distribute;
       justify-content: space-around;
+      padding: 30px 100px 0;
       margin: 0 0 80px;
       &-box {
-        width: 47%;
-        max-width: none;
+        width: 50%;
         padding: 75px 15px 40px;
         margin: 0 0 55px;
       }
       &-val {
-        font-size: 90px;
+        font-size: 90px !important;
       }
     }
     &__description {
@@ -199,6 +199,10 @@
 }
 
 @media screen and (max-width: 768px) {
+  .title {
+    font-size: 40px;
+  }
+
   .slider-nav {
     top: calc(100% + 10px);
   }
@@ -230,6 +234,15 @@
 
   .progress-slider {
     padding: 0;
+  }
+
+  .results {
+    &__indicators {
+      padding: 30px 0 0;
+    }
+    &__indicators-box {
+
+    }
   }
 
   .results {
@@ -325,20 +338,56 @@
 
   .subscription {
     &__input {
-      padding-right: 115px;
+      padding: 16px 315px 16px 16px;
+      font-size: 18px;
+      &::-webkit-input-placeholder {
+        color: $main-text-reverse;
+        font-size: 18px;
+      }
+      &::-moz-placeholder {
+        color: $main-text-reverse;
+        font-size: 18px;
+      }
+      &::-ms-placeholder {
+        color: $main-text-reverse;
+        font-size: 18px;
+      }
     }
     &__button {
-      padding: 15px 30px 15px;
-      font-size: 0;
+      padding: 20px 30px;
+      font-size: 12px;
       [class*="icon"] {
-        display: inline-block;
-        font-size: 26px;
+        display: none;
       }
+    }
+  }
+
+  .how-works {
+    padding: 80px 0;
+    &__instruction {
+      margin: 0;
+    }
+    &__instruction-box {
+      width: 50%;
+      padding: 0 50px;
+      margin: 0 0 90px;
+    }
+  }
+
+  .about-us {
+    &__title {
+      padding: 0;
     }
   }
 }
 
 @media screen and (max-width: 600px) {
+  .results {
+    &__indicators-box {
+      width: 100%;
+    }
+  }
+
   .pagination {
     &__link {
       padding: 16px 15px;
@@ -422,7 +471,15 @@
   }
 
   .title {
-    font-size: 38px;
+    font-size: 24px;
+  }
+
+  .plain-text {
+    font-size: 14px;
+  }
+
+  .slider-nav {
+    display: none;
   }
 
   .results {
@@ -442,14 +499,42 @@
   }
 
   .reviews {
+    &__head {
+      margin: 0 0 30px;
+    }
+    &__content {
+      width: auto;
+    }
+    &__card {
+      max-width: 260px;
+      height: 300px;
+      padding: 25px;
+      margin-right: 25px;
+    }
+    &__card-name {
+      margin: 0 0 15px;
+      font-size: 18px !important;
+      line-height: 18px;
+    }
+    &__card-text {
+      margin: 0 0 15px;
+      font-size: 14px;
+      line-height: 14px;
+    }
+  }
+
+  .faq {
+    &__head {
+      margin: 0 0 30px;
+    }
     &__content {
       width: auto;
     }
   }
 
-  .faq {
-    &__content {
-      width: auto;
+  .tariff {
+    &__head {
+      margin: 0 0 30px;
     }
   }
 
@@ -470,6 +555,9 @@
   }
 
   .blog {
+    &__head {
+      margin: 0 0 30px;
+    }
     &__content {
       &:not(.slick-slider) {
         .blog__article {
@@ -502,13 +590,74 @@
       line-height: normal;
     }
   }
+
+  .how-works {
+    padding: 60px 0;
+    &__instruction {
+      margin: 0 0 60px;
+    }
+    &__instruction-box {
+      display: -ms-inline-flexbox;
+      display: -webkit-inline-flex;
+      display: inline-flex;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      width: 100%;
+      padding: 0;
+      margin: 0 0 40px;
+      text-align: left;
+      &:last-child {
+        margin: 0;
+      }
+    }
+    &__instruction-img {
+      display: inline-block;
+      width: 60px;
+      height: 60px;
+      margin: 0 15px 0 0;
+    }
+    &__img {
+      margin: 0 0 25px;
+    }
+    &__slider-item {
+      font-size: 16px !important;
+    }
+  }
+
+  .subscription {
+    &__input {
+      height: 56px;
+      padding: 16px;
+      font-size: 18px;
+      &::-webkit-input-placeholder {
+        color: $main-text-reverse;
+        font-size: 18px;
+      }
+      &::-moz-placeholder {
+        color: $main-text-reverse;
+        font-size: 18px;
+      }
+      &::-ms-placeholder {
+        color: $main-text-reverse;
+        font-size: 18px;
+      }
+    }
+    &__button {
+      position: static;
+      width: 100%;
+      padding: 20px 30px;
+      margin: 15px 0 0;
+      font-size: 12px;
+      transform: none;
+      [class*="icon"] {
+        display: none;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 425px) {
-  .title {
-    font-size: 28px;
-  }
-
   .pagination {
     &__link {
       padding: 16px 10px;
@@ -518,6 +667,12 @@
   .header {
     &__content {
       padding: 80px 0 120px;
+    }
+    &.main {
+      background-position: left -110px center;
+      .header__content {
+        padding: 70px 0 100px;
+      }
     }
   }
 
@@ -533,12 +688,19 @@
   }
 
   .results {
-    &__indicators-val {
-      font-size: 80px;
+    padding: 60px 0;
+    &__description-box {
+      &:last-child {
+        margin: 0;
+      }
     }
     &__description-caption {
       font-size: 18px;
     }
+  }
+
+  .section-reviews {
+    margin: 0 0 60px;
   }
 
   .reviews {
@@ -551,6 +713,10 @@
     }
   }
 
+  .section-faq {
+    margin: 0 0 60px;
+  }
+
   .faq {
     &__box {
       max-width: 280px;
@@ -558,9 +724,62 @@
     }
   }
 
+  .section-tariff {
+    margin: 0 0 60px;
+  }
+
+  .tariff {
+    &__box {
+      padding: 24px 24px 80px;
+      min-height: auto;
+    }
+    &__caption {
+      font-size: 18px !important;
+    }
+    &__price {
+      bottom: 25px;
+      font-size: 32px !important;
+      &:after {
+        margin-left: 6px;
+        font-size: 32px;
+      }
+    }
+    &__button {
+      right: 20px;
+      bottom: 25px;
+      left: auto;
+      width: auto;
+      padding: 10px 15px;
+    }
+  }
+
+  .section-blog {
+    margin: 0 0 60px;
+  }
+
+  .blog {
+    &__article {
+      max-width: 215px;
+      min-height: 300px;
+      padding: 25px;
+    }
+  }
+
   .password-reset {
     &__btn {
       margin: 0 15px 0 0;
     }
+  }
+
+  .footer {
+    padding: 60px 0;
+  }
+
+  .subscription {
+    margin: 0 0 40px;
+  }
+
+  .footer-nav {
+    margin: 0 0 40px;
   }
 }
