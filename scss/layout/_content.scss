@@ -396,6 +396,9 @@
       margin-right: 0;
     }
   }
+  &__box-top {
+
+  }
   &__caption {
     @extend .title;
     margin: 0 0 20px;
@@ -428,6 +431,7 @@
     bottom: 40px;
     left: 40px;
     width: calc(100% - 80px);
+    padding: 20px 25px;
     text-align: center;
   }
 }

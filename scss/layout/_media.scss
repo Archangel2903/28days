@@ -278,9 +278,46 @@
 
   .tariff {
     &__box {
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -webkit-align-content: stretch;
+      -ms-flex-line-pack: stretch;
+      align-content: stretch;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
       width: 100%;
-      min-height: 350px;
+      min-height: auto;
+      padding: 40px;
       margin: 0 auto 25px;
+    }
+    &__box-top {
+      width: 42%;
+    }
+    &__caption {
+      margin: 0 0 15px;
+    }
+    &__price {
+      position: static;
+      font-size: 32px !important;
+      &:after {
+        margin-left: 5px;
+        font-size: 32px;
+      }
+    }
+    &__button {
+      position: static;
+      width: auto;
     }
   }
 
@@ -320,10 +357,19 @@
 
   .login-hint {
     width: 100%;
+    margin-left: -80%;
+    text-align: right;
+    .logo {
+      margin-right: 8.888%;
+    }
+    &__slider {
+      opacity: 0;
+      visibility: hidden;
+    }
   }
 
   .login-wrapper {
-    width: 100%;
+    width: 80%;
   }
 
   .blog {
@@ -385,6 +431,34 @@
   .results {
     &__indicators-box {
       width: 100%;
+    }
+  }
+
+  .tariff {
+    &__box {
+      display: inline-block;
+      padding: 24px 24px 80px;
+    }
+    &__box-top {
+      width: auto;
+    }
+    &__price {
+      position: absolute;
+      bottom: 25px;
+    }
+    &__button {
+      position: absolute;
+      right: 20px;
+      bottom: 25px;
+      left: auto;
+      width: auto;
+      padding: 10px 15px;
+    }
+  }
+
+  .login-hint {
+    .logo {
+      margin-right: 5%;
     }
   }
 
@@ -539,9 +613,14 @@
   }
 
   .login-hint {
+    display: none;
     &__slider {
       width: 80%;
     }
+  }
+
+  .login-wrapper {
+    width: 100%;
   }
 
   .login-form {
@@ -682,7 +761,7 @@
     }
     &__content {
       &.is-open {
-        right: 20px;
+        right: 15px;
       }
     }
   }
@@ -729,27 +808,8 @@
   }
 
   .tariff {
-    &__box {
-      padding: 24px 24px 80px;
-      min-height: auto;
-    }
     &__caption {
       font-size: 18px !important;
-    }
-    &__price {
-      bottom: 25px;
-      font-size: 32px !important;
-      &:after {
-        margin-left: 6px;
-        font-size: 32px;
-      }
-    }
-    &__button {
-      right: 20px;
-      bottom: 25px;
-      left: auto;
-      width: auto;
-      padding: 10px 15px;
     }
   }
 
