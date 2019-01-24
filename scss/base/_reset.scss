@@ -864,3 +864,9 @@ input.filled + span.custom-placeholder {
   -o-transform: translate(0%, 0%);
   transform: translate(0%, 0%)
 }
+
+.sticky {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+}

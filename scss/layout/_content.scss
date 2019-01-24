@@ -986,7 +986,7 @@
   }
   &__accordion {
     &-list {
-
+      margin: 0 0 120px;
     }
     &-item {
       @include radius(10px);
@@ -1061,6 +1061,64 @@
       line-height: 18px;
       @include transition($default-transition);
     }
+  }
+}
+
+.invite-friend {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 30px 40px 40px;
+  @include radius(10px);
+  background: #040406;
+  &__description {
+    display: inline-block;
+    width: 38%;
+    margin-right: 5.7%;
+  }
+  &__caption {
+    @extend .title;
+    margin: 0 0 15px;
+    color: #ffffff;
+    font-size: 24px !important;
+  }
+  &__text {
+    @extend .plain-text;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  &__form {
+    display: inline-flex;
+    width: 55%;
+  }
+  &__label {
+    position: relative;
+    display: inline-block;
+    width: 67%;
+    margin-right: 5%;
+  }
+  &__input {
+    @extend .input-reset;
+    width: 100%;
+  }
+  &__submit {
+
   }
 }
 
@@ -1225,5 +1283,6 @@
     font-size: 40px;
     text-align: center;
   }
-  .slick-slider {}
+  .slick-slider {
+  }
 }

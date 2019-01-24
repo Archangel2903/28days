@@ -31,6 +31,13 @@ header {
     -webkit-align-items: stretch;
     -ms-flex-align: stretch;
     align-items: stretch;
+    &.sticky {
+      left: 0;
+      width: 100%;
+      padding: 15px;
+      border-radius: 0 0 15px 15px;
+      background: rgba(4, 4, 4, .8);
+    }
   }
   &__content {
     padding: 80px 0 45px;
@@ -85,9 +92,6 @@ header {
     }
   }
   &.sticky {
-    position: fixed;
-    top: 0;
-    z-index: 1;
     padding: 0;
     background: #f2f2f2;
     .header {
@@ -131,6 +135,7 @@ header {
 }
 
 .header-menu {
+  display: flex;
   margin-left: auto;
   &__button-switch {
     display: none;
