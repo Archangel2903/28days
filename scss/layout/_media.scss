@@ -594,7 +594,7 @@
       width: auto;
     }
     &__card {
-      max-width: 260px;
+      max-width: 216px;
       height: 300px;
       padding: 25px;
       margin-right: 25px;
@@ -772,6 +772,7 @@
 }
 
 @media screen and (max-width: 425px) {
+
   .pagination {
     &__link {
       padding: 16px 10px;
@@ -818,9 +819,6 @@
   }
 
   .reviews {
-    &__card {
-      max-width: 280px;
-    }
     &__photo {
       object-fit: cover;
       object-position: top center;
@@ -832,8 +830,33 @@
   }
 
   .faq {
+    &__content {
+      .slick-dots {
+        display: block;
+        margin: 25px auto 0;
+        li {
+          display: inline-block;
+          margin-right: 5px;
+          &.slick-active button {
+            background: #040406;
+          }
+        }
+        button {
+          display: block;
+          width: 8px;
+          height: 8px;
+          padding: 0;
+          border: none;
+          border-radius: 100%;
+          font-size: 0;
+          background: #afafaf;
+          @include transition($default-transition);
+        }
+      }
+    }
     &__box {
-      max-width: 280px;
+      max-width: 295px;
+      //min-height: 295px;
       margin-right: 60px;
     }
   }
@@ -877,4 +900,5 @@
   .footer-nav {
     margin: 0 0 40px;
   }
+
 }

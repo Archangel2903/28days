@@ -21,18 +21,6 @@ function viewport() {
 
 /* viewport width */
 $(function ($) {
-    /* placeholder*/
-    /*$('input, textarea').each(function () {
-        var placeholder = $(this).attr('placeholder');
-        $(this).focus(function () {
-            $(this).attr('placeholder', '');
-        });
-        $(this).focusout(function () {
-            $(this).attr('placeholder', placeholder);
-        });
-    });*/
-    /* placeholder*/
-
     /* components */
     if ($('.slick-slider').length) {
         $('.slick-slider').each(function () {
@@ -63,27 +51,23 @@ $(function ($) {
                         breakpoint: 481,
                         settings: {
                             slidesToShow: 1,
-                            slidesToScroll: 1,
-                            // centerMode: true
+                            slidesToScroll: 1
                         }
                     }
                 ]
             });
         });
-    }
 
-    if ($('.select2').length) {
-        $('.select2').each(function () {
-            $(this).select2({
-                // placeholder: $(this).data('placeholder')
-            });
 
-            var thisPlaceholder = $(this).data('placeholder');
-
-            if (thisPlaceholder.length) {
-                $(this).next().find($('.select2-selection')).attr('data-pholder', thisPlaceholder);
-            }
-        });
+        if ($('.faq__content').length) {
+            $('.faq__content').slick('slickSetOption', 'responsive', [{
+                breakpoint: 426,
+                settings: {
+                    dots: true,
+                    centerMode: true,
+                }
+            }], true);
+        }
     }
 
     $('.login-hint__slider').slick({
@@ -153,6 +137,20 @@ $(function ($) {
             }
         ]
     });
+
+    if ($('.select2').length) {
+        $('.select2').each(function () {
+            $(this).select2({
+                // placeholder: $(this).data('placeholder')
+            });
+
+            var thisPlaceholder = $(this).data('placeholder');
+
+            if (thisPlaceholder.length) {
+                $(this).next().find($('.select2-selection')).attr('data-pholder', thisPlaceholder);
+            }
+        });
+    }
     /* components */
 
     $('.burger-js').on('click', function (e) {
