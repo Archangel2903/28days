@@ -580,6 +580,39 @@
 }
 
 // Article
+.section-article-head {
+  .header {
+    &__content {
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+      flex-direction: row;
+      -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+      justify-content: flex-start;
+      -webkit-align-content: flex-start;
+      -ms-flex-line-pack: start;
+      align-content: flex-start;
+      -webkit-align-items: center;
+      -ms-flex-align: center;
+      align-items: center;
+      padding: 40px 0;
+    }
+    &__title {
+      width: calc(100% - 95px);
+      margin: 0;
+      color: $title-color;
+      font-size: 24px;
+      line-height: 24px;
+    }
+  }
+}
+
 .section-article {
   margin: 0 0 120px;
 }
@@ -593,7 +626,7 @@
     object-position: center;
   }
   &__content {
-    padding: 0 95px;
+    padding: 0 250px 0 95px;
   }
   &__text {
     display: block;
@@ -1001,7 +1034,7 @@
       position: relative;
       padding: 32px;
       @extend .title;
-      font-size: 24px;
+      font-size: 24px !important;
       line-height: 24px;
       &.active {
         .account__accordion-item-trigger {
@@ -1228,15 +1261,15 @@
     -webkit-align-content: flex-start;
     -ms-flex-line-pack: start;
     align-content: flex-start;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
     margin: 0 0 120px;
   }
   &__instruction-box {
     display: inline-block;
     width: 25%;
-    padding: 0 25px;
+    padding: 0 20px;
     text-align: center;
   }
   &__instruction-img {
@@ -1245,6 +1278,7 @@
   }
   &__instruction-text {
     font-family: $custom-font-family;
+    font-size: 16px;
     line-height: 1.5;
     color: #040406;
   }
@@ -1263,7 +1297,7 @@
     box-shadow: 0 4px 10px 0 rgba(225, 225, 225, 0.5), 0 4px 10px 0 rgba(0, 0, 0, 0.04);
     background-color: #ffffff;
     @extend .title;
-    font-size: 18px;
+    font-size: 18px !important;
     line-height: 24px;
     @include transition($default-transition);
     &:hover {
@@ -1280,7 +1314,7 @@
     max-width: 790px;
     padding: 0 65px;
     margin: 0 auto 120px;
-    font-size: 40px;
+    font-size: 48px;
     text-align: center;
   }
   .slick-slider {

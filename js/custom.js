@@ -58,7 +58,6 @@ $(function ($) {
             });
         });
 
-
         if ($('.faq__content').length) {
             $('.faq__content').slick('slickSetOption', 'responsive', [{
                 breakpoint: 426,
@@ -67,6 +66,49 @@ $(function ($) {
                     centerMode: true,
                 }
             }], true);
+        }
+
+        if ($('.how-works__slider').length) {
+            $('.how-works__slider').slick('slickSetOption', 'responsive', [
+                {
+                    breakpoint: 481,
+                    settings: 'unslick'
+                }
+            ], true);
+
+            $(window).on('load resize', function () {
+                if ($(window).innerWidth() > 480) {
+                    $('.how-works__slider:not(".slick-slider")').slick({
+                        appendArrows: $(this).closest('section').find('.slider-nav'),
+                        dots: false,
+                        infinite: true,
+                        speed: 300,
+                        slidesToShow: 4,
+                        slidesToScroll: 1,
+                        variableWidth: true,
+                        responsive: [
+                            {
+                                breakpoint: 1025,
+                                settings: {
+                                    slidesToShow: 3,
+                                    slidesToScroll: 1
+                                }
+                            },
+                            {
+                                breakpoint: 769,
+                                settings: {
+                                    slidesToShow: 2,
+                                    slidesToScroll: 1
+                                }
+                            },
+                            {
+                                breakpoint: 481,
+                                settings: 'unslick'
+                            }
+                        ]
+                    });
+                }
+            });
         }
     }
 
@@ -229,6 +271,8 @@ $(function ($) {
     $(window).on('load resize', function () {
         if ($(window).innerWidth() > 991) {
             ap($initElement, 4);
+
+            $('.header:not(".main")').addClass('border-radius-b-r');
         }
         else if ($(window).innerWidth() <= 991 && $(window).innerWidth() > 768) {
             ap($initElement, 3);
@@ -238,6 +282,10 @@ $(function ($) {
         }
         else if ($(window).innerWidth() <= 480 && $(window).innerWidth() > 0) {
             ap($initElement, 1);
+        }
+
+        if ($(window).innerWidth() <= 991) {
+            $('.header:not(".main")').removeClass('border-radius-b-r');
         }
 
         if ($('.sticky').length) {
