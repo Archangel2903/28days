@@ -127,3 +127,10 @@ footer {
   line-height: 24px;
   white-space: pre-line;
 }
+
+.payment-system {
+  padding-top: 10px;
+  &__ico {
+    height: 30px;
+  }
+}
