@@ -143,7 +143,7 @@
     }
     .copyright {
       order: 2;
-      width: 70%;
+      width: 60%;
     }
   }
 }
@@ -406,6 +406,12 @@
       width: 100%;
     }
   }
+
+  .footer-nav {
+    .copyright {
+      width: 48%;
+    }
+  }
 }
 
 @media screen and (max-width: 750px) {
@@ -605,9 +611,6 @@
     }
     &__social {
       padding: 0;
-    }
-    .copyright {
-      width: 60%;
     }
   }
 }
