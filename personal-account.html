@@ -4,7 +4,10 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1">
+
     <title>Личный кабинет</title>
+
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
     <link rel="stylesheet" type="text/css" href="css/style_content.css"/>
 </head>
@@ -50,9 +53,44 @@
 
             <div class="header__content">
                 <p class="header__title">Мой прогресс</p>
-                <p class="header__text">Пройдено 0 дней из 28</p>
+                <p class="header__text">Пройдено 1 день из 28</p>
 
-                <div class="progress-slider">
+                <div id="progressbar"></div>
+
+                <div class="progress-calendar">
+
+                    <div class="progress-calendar__box active"><p class="progress-calendar__day">1</p></div>
+                    <div class="progress-calendar__box active"><p class="progress-calendar__day">2</p></div>
+                    <div class="progress-calendar__box active"><p class="progress-calendar__day">3</p></div>
+                    <div class="progress-calendar__box active"><p class="progress-calendar__day">4</p></div>
+                    <div class="progress-calendar__box active"><p class="progress-calendar__day">5</p></div>
+                    <div class="progress-calendar__box active"><p class="progress-calendar__day">6</p></div>
+                    <div class="progress-calendar__box active"><p class="progress-calendar__day">7</p></div>
+                    <div class="progress-calendar__box active"><p class="progress-calendar__day">8</p></div>
+                    <div class="progress-calendar__box active"><p class="progress-calendar__day">9</p></div>
+                    <div class="progress-calendar__box"><p class="progress-calendar__day">10</p></div>
+                    <div class="progress-calendar__box"><p class="progress-calendar__day">11</p></div>
+                    <div class="progress-calendar__box"><p class="progress-calendar__day">12</p></div>
+                    <div class="progress-calendar__box"><p class="progress-calendar__day">13</p></div>
+                    <div class="progress-calendar__box"><p class="progress-calendar__day">14</p></div>
+                    <div class="progress-calendar__box"><p class="progress-calendar__day">15</p></div>
+                    <div class="progress-calendar__box"><p class="progress-calendar__day">16</p></div>
+                    <div class="progress-calendar__box"><p class="progress-calendar__day">17</p></div>
+                    <div class="progress-calendar__box"><p class="progress-calendar__day">18</p></div>
+                    <div class="progress-calendar__box"><p class="progress-calendar__day">19</p></div>
+                    <div class="progress-calendar__box"><p class="progress-calendar__day">20</p></div>
+                    <div class="progress-calendar__box"><p class="progress-calendar__day">21</p></div>
+                    <div class="progress-calendar__box"><p class="progress-calendar__day">22</p></div>
+                    <div class="progress-calendar__box"><p class="progress-calendar__day">23</p></div>
+                    <div class="progress-calendar__box"><p class="progress-calendar__day">24</p></div>
+                    <div class="progress-calendar__box"><p class="progress-calendar__day">25</p></div>
+                    <div class="progress-calendar__box"><p class="progress-calendar__day">26</p></div>
+                    <div class="progress-calendar__box"><p class="progress-calendar__day">27</p></div>
+                    <div class="progress-calendar__box"><p class="progress-calendar__day">28</p></div>
+
+                </div>
+
+                <!--<div class="progress-slider">
 
                     <a href="#1" class="progress-slider__box active">
                         <span class="progress-slider__ico"></span>
@@ -222,7 +260,7 @@
                         <span class="progress-slider__text">день</span>
                     </a>
 
-                </div>
+                </div>-->
             </div>
         </div>
     </header>
@@ -491,9 +529,27 @@
 
 <script type="text/javascript" src="js/jquery-3.0.0.min.js"></script>
 <script type="text/javascript" src="js/jquery-migrate-1.4.1.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script type="text/javascript" src="js/components/slick.js"></script>
 <script type="text/javascript" src="js/components/select2.full.min.js"></script>
 <script type="text/javascript" src="js/custom.js"></script>
+
+<script>
+    $( function() {
+        var progress_max = $('.progress-calendar__box:not(".slick-cloned")').length,
+            progress_val = $('.progress-calendar__box.active:not(".slick-cloned")').length;
+
+        $( "#progressbar" ).progressbar({
+            max: progress_max,
+            value: progress_val
+        });
+
+        $('.header__text').text('Пройдено ' + progress_val + ' день из ' + progress_max);
+
+        console.log(progress_max, progress_val);
+    });
+</script>
+
 </body>
 </html>
 

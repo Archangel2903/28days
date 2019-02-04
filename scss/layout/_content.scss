@@ -1006,6 +1006,57 @@
 }
 
 // Account
+.progress-calendar {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: stretch;
+  -ms-flex-line-pack: stretch;
+  align-content: stretch;
+  -webkit-align-items: stretch;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+  &__box {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    &.active {
+      &:before {
+        content: '\e909';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        color: #d9b680;
+        font-family: 'icomoon';
+        font-size: 32px;
+        transform: translate(-50%, -50%);
+      }
+
+      .progress-calendar__day {
+        font-size: 0;
+      }
+    }
+  }
+  &__day {
+    color: rgba(255, 255, 255, .16);
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 40px;
+    user-select: none;
+  }
+}
+
 .section-account {
   padding: 120px 0;
 }
@@ -1152,7 +1203,7 @@
   }
 }
 
-.progress-slider {
+/*.progress-slider {
   position: relative;
   padding-right: 90px;
   .slick-arrow {
@@ -1237,7 +1288,7 @@
     font-size: 16px;
     line-height: 16px;
   }
-}
+}*/
 
 // How it works
 .how-works {

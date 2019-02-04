@@ -199,8 +199,10 @@
     }
   }
 
-  .progress-slider {
-    padding: 0;
+  .progress-calendar {
+    &__box {
+      width: 50px;
+    }
   }
 
   .results {
@@ -586,6 +588,12 @@
     }
   }
 
+  .progress-calendar {
+    &__box {
+      width: 40px;
+    }
+  }
+
   .select2 {
     &.select2-container {
       text-align: left;
@@ -918,6 +926,10 @@
     }
   }
 
+  .footer {
+    padding: 60px 0;
+  }
+
   .footer-nav {
     &__social {
       order: inherit;
@@ -931,7 +943,6 @@
 }
 
 @media screen and (max-width: 425px) {
-
   .pagination {
     &__link {
       padding: 16px 10px;
@@ -1052,9 +1063,4 @@
   .subscription {
     margin: 0 0 40px;
   }
-
-  .footer-nav {
-    margin: 0 0 40px;
-  }
-
 }

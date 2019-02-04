@@ -543,30 +543,30 @@ h3 {
 }
 
 .border-radius {
-  @include radius(250px);
+  @include radius(200px);
   &-t {
-    @include radius(250px 250px 0 0);
+    @include radius(200px 200px 0 0);
   }
   &-t-l {
-    @include radius(250px 0 0 0);
+    @include radius(200px 0 0 0);
   }
   &-t-r {
-    @include radius(0 250px 0 0);
+    @include radius(0 200px 0 0);
   }
   &-r {
-    @include radius(0 250px 250px 0);
+    @include radius(0 200px 200px 0);
   }
   &-b {
-    @include radius(0 0 250px 250px);
+    @include radius(0 0 200px 200px);
   }
   &-b-r {
-    @include radius(0 0 250px 0);
+    @include radius(0 0 200px 0);
   }
   &-b-l {
-    @include radius(0 0 0 250px);
+    @include radius(0 0 0 200px);
   }
   &-l {
-    @include radius(250px 0 0 250px);
+    @include radius(200px 0 0 200px);
   }
 }
 

@@ -131,7 +131,7 @@ $(function ($) {
         ]*/
     });
 
-    $('.progress-slider').slick({
+    /*$('.progress-slider').slick({
         infinity: false,
         slidesToShow: 7,
         slidesToScroll: 1,
@@ -178,7 +178,7 @@ $(function ($) {
                 }
             }
         ]
-    });
+    });*/
 
     if ($('.select2').length) {
         $('.select2').each(function () {

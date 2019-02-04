@@ -136,6 +136,20 @@ header {
       }
     }
   }
+
+  .ui-progressbar {
+    height: 8px;
+    border: none;
+    border-radius: 10px;
+    margin: 0 0 35px;
+    background: rgba(240, 240, 240, .08);
+    &-value {
+      border: none;
+      border-radius: 10px;
+      margin: 0;
+      background: #d9b680;
+    }
+  }
 }
 
 .logo {
