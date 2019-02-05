@@ -22,31 +22,18 @@
                     <img src="img/logo-light.svg" class="logo__img" alt="28 дней" title="28 дней">
                 </a>
 
-                <div class="header-menu">
-                    <button class="header-menu__button-switch button-transparent-bright burger-js">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
+                <div class="header-menu header-menu_inside">
+                    <div class="header-menu__nav">
+                        <a href="https://www.facebook.com/" class="header-menu__nav-link" target="_blank"><span class="icon-facebook"></span>facebook</a>
+                    </div>
 
-                    <div class="header-menu__content">
-                        <div class="header-menu__nav">
-                            <a href="#01" class="header-menu__nav-link">Как это работает</a>
-                            <a href="blog.html" class="header-menu__nav-link">Блог</a>
-                            <a href="#03" class="header-menu__nav-link">О нас</a>
-                        </div>
+                    <div class="header-menu__authorized">
+                        <p class="header-menu__auth-user auth-list"><span class="icon-person"></span>Пользователь</p>
 
-                        <div class="header-menu__authorized">
-                            <p class="header-menu__auth-user auth-list">Пользователь</p>
-
-                            <ul class="header-menu__auth-menu">
-                                <li class="header-menu__auth-menu-item"><a href="#01" class="header-menu__auth-menu-link">Мои данные</a></li>
-
-                                <li class="header-menu__auth-menu-item"><a href="#02" class="header-menu__auth-menu-link">Поддержка</a></li>
-
-                                <li class="header-menu__auth-menu-item"><a href="#03" class="header-menu__auth-menu-link">Выход</a></li>
-                            </ul>
-                        </div>
+                        <ul class="header-menu__auth-menu">
+                            <li class="header-menu__auth-menu-item"><a href="personal-account.html" class="header-menu__auth-menu-link">Мои данные</a></li>
+                            <li class="header-menu__auth-menu-item"><a href="index.html" class="header-menu__auth-menu-link">Выход</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -533,11 +520,11 @@
 <script type="text/javascript" src="js/custom.js"></script>
 
 <script>
-    $( function() {
+    $(function () {
         var progress_max = $('.progress-calendar__box').length,
             progress_val = $('.progress-calendar__box.active').length;
 
-        $( "#progressbar" ).progressbar({
+        $("#progressbar").progressbar({
             max: progress_max,
             value: progress_val
         });

@@ -329,4 +329,15 @@ header {
       color: $title-color;
     }
   }
+
+  &_inside {
+    [class*="icon"] {
+      display: none;
+    }
+    .header-menu {
+      &__authorized {
+        padding-left: 20px;
+      }
+    }
+  }
 }
