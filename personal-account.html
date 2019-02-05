@@ -58,7 +58,6 @@
                 <div id="progressbar"></div>
 
                 <div class="progress-calendar">
-
                     <div class="progress-calendar__box active"><p class="progress-calendar__day">1</p></div>
                     <div class="progress-calendar__box active"><p class="progress-calendar__day">2</p></div>
                     <div class="progress-calendar__box active"><p class="progress-calendar__day">3</p></div>
@@ -87,7 +86,6 @@
                     <div class="progress-calendar__box"><p class="progress-calendar__day">26</p></div>
                     <div class="progress-calendar__box"><p class="progress-calendar__day">27</p></div>
                     <div class="progress-calendar__box"><p class="progress-calendar__day">28</p></div>
-
                 </div>
 
                 <!--<div class="progress-slider">
@@ -536,17 +534,13 @@
 
 <script>
     $( function() {
-        var progress_max = $('.progress-calendar__box:not(".slick-cloned")').length,
-            progress_val = $('.progress-calendar__box.active:not(".slick-cloned")').length;
+        var progress_max = $('.progress-calendar__box').length,
+            progress_val = $('.progress-calendar__box.active').length;
 
         $( "#progressbar" ).progressbar({
             max: progress_max,
             value: progress_val
         });
-
-        $('.header__text').text('Пройдено ' + progress_val + ' день из ' + progress_max);
-
-        console.log(progress_max, progress_val);
     });
 </script>
 

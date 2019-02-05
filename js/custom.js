@@ -294,27 +294,26 @@ $(function ($) {
         }
     });
 
-    $(document).on('load scroll', function (e) {
-        if ($('.results__indicators-val:not(.active)').length) {
-            if ($(document).scrollTop() >= 300) {
-                $('.results__indicators-val:not(.active)').spincrement({
-                    from: 0,
-                    to: false,
-                    decimalPlaces: 0,
-                    decimalPoint: '.',
-                    thousandSeparator: ',',
-                    duration: 6000, // ms; TOTAL length animation
-                    leeway: 100, // percent of duraion
-                    easing: 'spincrementEasing',
-                    fade: true,
-                    complete: function (e) {
-                        e.addClass('active');
-                    }
-                });
-            }
+    $(window).on('load scroll', function (e) {
+        if ($(this).scrollTop() >= 300 && $('.results__indicators-val.active').length === 0) {
+            $('.results__indicators-val').addClass('active');
+            $('.results__indicators-val').spincrement({
+                from: 0,
+                to: false,
+                decimalPlaces: 0,
+                decimalPoint: '.',
+                thousandSeparator: ',',
+                duration: 3000, // ms; TOTAL length animation
+                leeway: 0, // percent of duraion
+                easing: 'spincrementEasing',
+                fade: true,
+                complete: function (e) {
+                    e.addClass('active');
+                }
+            });
         }
 
-        if ($(document).scrollTop() >= 1) {
+        if ($(this).scrollTop() >= 1) {
             $('.header__top').addClass('sticky');
         } else {
             $('.header__top').removeClass('sticky');
