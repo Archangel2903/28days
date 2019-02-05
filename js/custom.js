@@ -295,7 +295,7 @@ $(function ($) {
     });
 
     $(window).on('load scroll', function (e) {
-        if ($(this).scrollTop() >= 300 && $('.results__indicators-val.active').length === 0) {
+        if ($(this).scrollTop() >= 300 && $('.results__indicators-val').length && $('.results__indicators-val.active').length === 0) {
             $('.results__indicators-val').addClass('active');
             $('.results__indicators-val').spincrement({
                 from: 0,
