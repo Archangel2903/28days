@@ -799,9 +799,16 @@
   }
 
   .login-hint {
-    display: none;
+    padding: 15px 0;
+    @include radius(0);
+    margin: 0;
+    .logo {
+      display: block;
+      margin-right: 5%;
+      margin: 0 5%;
+    }
     &__slider {
-      width: 80%;
+      display: none;
     }
   }
 
@@ -810,7 +817,7 @@
   }
 
   .login-form {
-    padding: 160px 20px 0;
+    padding: 60px 20px 0;
     &__title {
       font-size: 30px !important;
     }
