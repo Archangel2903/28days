@@ -33,6 +33,7 @@ header {
     align-items: stretch;
     &.sticky {
       left: 0;
+      z-index: 100;
       width: 100%;
       padding: 15px;
       border-radius: 0 0 15px 15px;

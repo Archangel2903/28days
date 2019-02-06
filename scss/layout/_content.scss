@@ -397,9 +397,34 @@
     padding: 40px 40px 200px;
     @include radius(10px);
     margin: 0 3% 0 0;
+    overflow: hidden;
     background: #000000;
     &:last-child {
       margin-right: 0;
+    }
+    &_disabled {
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, .75);
+      }
+      &:after {
+        content: attr(data-placeholder);
+        @include center_transform();
+        z-index: 1;
+        display: inline-block;
+        color: #fff;
+        font-family: 'Roboto Slab', serif;
+        font-weight: bold;
+        font-size: 76px;
+        @include transform(translate(-50%, -50%) rotate(-40grad));
+      }
     }
   }
   &__box-top {
@@ -1327,27 +1352,27 @@
     text-align: center;
     &:nth-child(1) {
       margin-top: 31px;
-      &> img {
+      & > img {
         margin: 0 auto 42px;
       }
     }
     &:nth-child(2) {
       margin-top: 17px;
-      &> img {
+      & > img {
         margin: 0 auto 46px;
       }
     }
     &:nth-child(3) {
       width: 28%;
       margin-top: 13px;
-      &> img {
+      & > img {
         margin: 0 auto 41px;
       }
     }
     &:nth-child(4) {
       width: 22%;
       margin-top: 5px;
-      &> img {
+      & > img {
         margin: 0 auto 34px;
       }
     }
