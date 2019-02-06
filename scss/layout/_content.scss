@@ -415,7 +415,7 @@
         background: rgba(0, 0, 0, .75);
       }
       &:after {
-        content: attr(data-placeholder);
+        content: 'Скоро';
         @include center_transform();
         z-index: 1;
         display: inline-block;
